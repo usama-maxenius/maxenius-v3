@@ -106,6 +106,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import Image from 'next/image'
 import { theme } from "../../../config/theme" // ✅ import your theme
 
 const cards = [
@@ -194,7 +195,7 @@ const Slider = () => {
                 <div className="flex flex-1">
                   {/* Left Side */}
                   <div className="w-1/2 flex flex-col pt-[15px]">
-                    <img
+                    <Image
                       src={card.topLeft}
                       alt="Top Left"
                       className={`${card.size} object-contain mb-3`}
@@ -215,7 +216,7 @@ const Slider = () => {
 
                   {/* Right Side */}
                   <div className="w-1/2 flex items-center justify-center">
-                    <img
+                    <Image
                       src={card.right}
                       alt="Right Image"
                       className="w-full h-[390px] object-contain"

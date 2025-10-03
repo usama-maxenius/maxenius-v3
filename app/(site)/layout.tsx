@@ -1,9 +1,10 @@
 import type { Metadata } from 'next';
 import { Poppins } from 'next/font/google';
-import './globals.css';
-import Footer from './components/common/Footer';
-import Navbar from './components/common/Navbar';
-import ScrollToTop from './components/common/ScrollToTop/ScrollToTop';
+import '../styles/globals.css';
+
+import Navbar from '@components/common/Navbar';
+import Footer from '@components/common/Footer';
+import ScrollToTop from '@components/common/ScrollToTop/ScrollToTop';
 
 
 // Configure Poppins font

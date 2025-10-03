@@ -92,15 +92,15 @@
 
 import React from "react";
 import { theme } from '../../../config/theme';
+import Image from 'next/image'
+import Link from "next/link";
 
 const Footer = () => {
   return (
-    <section className={` py-16`}
-    style={{
-      background:
-      theme.colors.background.circle
-    }}
-      >
+    <section
+      className={`py-16`}
+      style={{ background: theme.colors.background.oval }}
+    >
       <div
         className={`grid grid-cols-5 gap-10 ${theme.spacing.container} pt-15 text-left pl-[40px]`}
       >
@@ -120,16 +120,16 @@ const Footer = () => {
             </li>
             <li className="flex gap-10 mt-10">
               <span>
-                <img src="/assets/footer/twitter.svg" alt="Twitter" />
+                <Image src="/assets/footer/twitter.svg" alt="Twitter" />
               </span>
               <span>
-                <img src="/assets/footer/facebook.svg" alt="Facebook" />
+                <Image src="/assets/footer/facebook.svg" alt="Facebook" />
               </span>
               <span>
-                <img src="/assets/footer/instagram.svg" alt="Instagram" />
+                <Image src="/assets/footer/instagram.svg" alt="Instagram" />
               </span>
               <span>
-                <img src="/assets/footer/linkedin.svg" alt="LinkedIn" />
+                <Image src="/assets/footer/linkedin.svg" alt="LinkedIn" />
               </span>
             </li>
           </ol>
@@ -140,7 +140,7 @@ const Footer = () => {
           <ol
             className={`space-y-8 ${theme.typography.paragraph.p3} ${theme.colors.text.inverse} leading-[31.2px] font-normal`}
           >
-            <li >Company</li>
+            <li>Company</li>
             <li>About us</li>
             <li>Contact us</li>
             <li>Careers</li>
@@ -153,7 +153,7 @@ const Footer = () => {
           <ol
             className={`space-y-8 ${theme.typography.paragraph.p3} ${theme.colors.text.inverse} leading-[31.2px] font-normal`}
           >
-            <li >Products</li>
+            <li>Products</li>
             <li>Reservation & Ticketing</li>
             <li>Maxiventory</li>
           </ol>
@@ -164,7 +164,7 @@ const Footer = () => {
           <ol
             className={`space-y-8 ${theme.typography.paragraph.p3} ${theme.colors.text.inverse} leading-[31.2px] font-normal`}
           >
-            <li >Services</li>
+            <li>Services</li>
             <li>Product Ideation</li>
             <li>Product Design</li>
             <li>Product Development</li>
@@ -177,7 +177,7 @@ const Footer = () => {
           <ol
             className={`space-y-9 ${theme.typography.paragraph.p3} ${theme.colors.text.inverse} leading-[31.2px] font-normal`}
           >
-            <li >Legal</li>
+            <li>Legal</li>
             <li>Privacy</li>
             <li>Terms & Conditions</li>
             <li>Return Policy</li>
@@ -187,24 +187,23 @@ const Footer = () => {
 
       {/* Contact Us Section */}
       <div className="max-w-[1300px] mx-auto flex justify-end pt-30">
-        <div
-          className={`flex items-center w-[421px] h-[80px] rounded-full  px-5 gap-4`}
-          style={{
-            background:
-            theme.colors.background.dark
-          }}
-        >
-          <span
-            className={`${theme.colors.text.inverse} font-bold text-[18px] ${theme.colors.background.oval} px-[25px] py-[20px] rounded-full whitespace-nowrap`}
+        <Link href="/contact" passHref>
+          <div
+            className={`flex items-center w-[421px] h-[80px] rounded-full px-5 gap-4 cursor-pointer`}
+            style={{ background: theme.colors.background.dark }}
           >
-            Contact Us
-          </span>
-          <p
-            className={`${theme.colors.text.inverse} text-[18px] leading-[23px] font-normal`}
-          >
-            SHARE YOUR PRODUCT IDEA WITH US
-          </p>
-        </div>
+            <span
+              className={`${theme.colors.text.inverse} font-bold text-[18px] ${theme.colors.background.oval} px-[25px] py-[20px] rounded-full whitespace-nowrap`}
+            >
+              Contact Us
+            </span>
+            <p
+              className={`${theme.colors.text.inverse} text-[18px] leading-[23px] font-normal`}
+            >
+              SHARE YOUR PRODUCT IDEA WITH US
+            </p>
+          </div>
+        </Link>
       </div>
     </section>
   );

@@ -1,13 +1,14 @@
-import SeoHead from "./components/common/SeoHead/SeoHead";
-import ChooseUs from "./components/sections/ChooseUs";
-import DiscussProject from "./components/sections/DiscussProject";
-import Hero from "./components/sections/Hero";
-import IndustryWork from "./components/sections/IndustryWork";
-import OurProducts from "./components/sections/OurProducts";
-import Portfolio from "./components/sections/Portfolio";
-import ServiceOffer from "./components/sections/ServiceOffer";
-import Testimonial from "./components/sections/Testimonial";
-import WorkTogether from "./components/sections/WorkTogether";
+import SeoHead from "@components/common/SeoHead/SeoHead";
+import ChooseUs from "@components/sections/ChooseUs";
+import DiscussProject from "@components/sections/DiscussProject";
+import Hero from "@components/sections/Hero";
+import IndustryWork from "@components/sections/IndustryWork";
+import OurProducts from "@components/sections/OurProducts";
+import Portfolio from "@components/sections/Portfolio";
+import ServiceOffer from "@components/sections/ServiceOffer";
+import Testimonial from "@components/sections/Testimonial";
+import WorkTogether from "@components/sections/WorkTogether";
+
 
 
 

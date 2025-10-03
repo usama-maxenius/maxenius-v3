@@ -52,6 +52,7 @@
 
 
 import React from "react"
+import Image from 'next/image'
 import { ArrowUpRight } from "lucide-react"
 import { theme } from "../../../config/theme"
 
@@ -82,7 +83,7 @@ const ServiceOffer = () => {
           <div>
             {/* Card 1 */}
             <div className="text-left">
-              <img
+              <Image
                 src="/assets/serviceoffer/ideation.svg"
                 alt="PRODUCT IDEATION"
               />
@@ -110,7 +111,7 @@ const ServiceOffer = () => {
 
             {/* Card 2 */}
             <div className="text-left pt-45">
-              <img
+              <Image
                 src="/assets/serviceoffer/development.svg"
                 alt="PRODUCT DEVELOPMENT"
               />
@@ -139,7 +140,7 @@ const ServiceOffer = () => {
 
           {/* Middle Image */}
           <div>
-            <img
+            <Image
               src="/assets/serviceoffer/daigram.svg"
               alt="Daigram"
               className="w-[500px]"
@@ -150,7 +151,7 @@ const ServiceOffer = () => {
           <div>
             {/* Card 3 */}
             <div className="text-left pt-[15px] pl-45">
-              <img
+              <Image
                 src="/assets/serviceoffer/designing.svg"
                 alt="PRODUCT DESIGNING"
               />
@@ -178,7 +179,7 @@ const ServiceOffer = () => {
 
             {/* Card 4 */}
             <div className="text-left pt-45 pl-45">
-              <img
+              <Image
                 src="/assets/serviceoffer/growth.svg"
                 alt="PRODUCT GROWTH & SCALEBILITY"
               />

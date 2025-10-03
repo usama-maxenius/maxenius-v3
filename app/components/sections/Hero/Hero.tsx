@@ -175,21 +175,15 @@
 'use client';
 
 import React from 'react';
-import { Card, CardFooter, CardHeader } from '../../ui/card';
+
 import { theme } from '../../../config/theme';
+import MockData from './MockData';
+import MockData2 from './MockData2';
 
 const Hero = () => {
-  const cards = [
-    { id: 1, topLeft: '100+.png', bottomLeft: 'Developers', bottomRight: '/01' },
-    { id: 2, topLeft: '5+.png', bottomLeft: 'Years in Business', bottomRight: '/2' },
-    { id: 3, topLeft: '2K+.png', bottomLeft: 'Customers Served', bottomRight: '/03' },
-    { id: 4, topLeft: '500+.png', bottomLeft: 'Global Clients', bottomRight: '/04' },
-  ];
+ 
 
-  const logos = [
-    'airtable.png', 'fivetran.png', 'pendo.png',
-    'airbnb.png', 'elastic.png', 'airtable.png', 'airbnb.png',
-  ];
+  
 
   return (
     <section
@@ -207,7 +201,7 @@ const Hero = () => {
         </p>
 
         {/* Heading */}
-        <h1 className={`${theme.colors.brand.accent} ${theme.spacing.container}  ${theme.typography.heading.h1} leading-[135px] font-semibold text-center my-6`}>
+        <h1 className={`${theme.colors.brand.accent} ${theme.spacing.container}  ${theme.typography.heading.h1} leading-[135px] font-semibold text-center mb-15 my-6`}>
           Expert Insights On Everything Tech
         </h1>
 
@@ -218,69 +212,16 @@ const Hero = () => {
         </p>
 
         {/* Trusted By Section */}
-        <div className={`mb-20  border ${theme.colors.border.base} overflow-hidden`}>
-          <div className="flex flex-wrap w-full">
-            {/* Left Side */}
-            <div className="py-4 w-full sm:w-[300px] bg-transparent border-b  border-r border-white/30">
-              <div className="flex items-start ml-12 space-x-3">
-                <img src="/assets/herosection/star.png" alt="star" className="w-6 h-5" />
-                <span className="text-white font-medium text-lg leading-[22px] font-medium">
-                  Trusted by industry leaders
-                </span>
-              </div>
-              <span className="text-white font-normal text-base leading-[26px] ml-20 block">
-                500+ clients
-              </span>
-            </div>
-
-            {/* Logos */}
-            <div className="flex flex-wrap justify-between items-center flex-1 gap-8">
-              {logos.map((logo, index) => (
-                <div
-                  key={index}
-                  className="w-36 h-12 flex items-center justify-center rounded-full"
-                >
-                  <img src={`/assets/herosection/${logo}`} alt={logo.replace('.png', '')} />
-                </div>
-              ))}
-            </div>
-          </div>
+        <div>
+          <MockData2/>
         </div>
+        
 
         {/* Cards Section */}
-       <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 ${theme.spacing.container} ${theme.spacing.container}  mx-auto`}>
-  {cards.map((card, index) => (
-    <Card
-      key={card.id}
-      className="flex flex-col justify-between" // ✅ Flex column to push footer to bottom
-      style={{
-        width: "392px",       // Fixed width
-        height: "227px",      // Fixed height
-        border: "none",
-        background:
-          index === 2
-            ? `${theme.colors.background.gradient}`
-            : `${theme.colors.background.dark}`,
-      }}
-    >
-      <CardHeader>
-        <img
-          src={`/assets/herosection/${card.topLeft}`}
-          alt={card.bottomLeft}
-          className="object-contain w-16"
-        />
-      </CardHeader>
-
-      <CardFooter className={`flex ${theme.typography.paragraph.p2} justify-between leading-[30px] font-normal items-center px-4 ${
-    index === 2 ? theme.colors.brand.accent : theme.colors.brand.medium
-  }`} >
-        <span className="font-semibold">{card.bottomLeft}</span>
-        <span className="font-medium">{card.bottomRight}</span>
-      </CardFooter>
-    </Card>
-  ))}
-</div>
-
+        <div>
+          <MockData/>
+        </div>
+    
 
       </div>
     </section>

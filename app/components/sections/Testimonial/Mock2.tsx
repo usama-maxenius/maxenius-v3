@@ -97,6 +97,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from 'next/image'
 import { Card, CardContent } from "../../ui/card";
 import { theme } from "../../../config/theme";
 
@@ -144,7 +145,7 @@ const Mock2 = () => {
           >
             <CardContent className="flex items-center gap-10 h-full">
               {/* Image */}
-              <img
+              <Image
                 src={card.left}
                 alt={card.bottom}
                 className={`w-[78.31px] h-[78.31px] ml-10 -mt-4 rounded-full ${

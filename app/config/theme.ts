@@ -29,6 +29,7 @@ export const theme = {
     border: {
       base: "border-gray-500",
       strong: "border-gray-800",
+      red:"border-[#C42630]"
     },
     text: {
       base: "text-gray-800",

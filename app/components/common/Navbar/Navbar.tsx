@@ -53,45 +53,61 @@
 
 import React from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { theme } from '../../../config/theme';
 
-const Navbar = () => {
+interface NavbarProps {
+  textColor?: 'black' | 'white'; // page-specific text color
+}
+
+const Navbar = ({ textColor = 'white' }: NavbarProps) => {
   const navItems = [
-    { name: 'Our Services', href: '/services' },
-    { name: 'Products', href: '/products' },
+    { name: 'Our Services', href: '/OurServices' },
+    { name: 'Products', href: '/Products' },
     { name: 'Our Works', href: '/works' },
-    { name: 'Resources', href: '/resources' },
+    { name: 'Resources', href: '/Resources' },
   ];
 
+  const pathname = usePathname(); // current route
+
+  // Tailwind class dynamically based on textColor prop
+  const linkClass = textColor === 'black'
+    ? `${theme.typography.paragraph.p3} font-semibold leading-[30px] text-black relative`
+    : `${theme.typography.paragraph.p3} font-semibold leading-[30px] text-white relative`;
+
+  // Logo class dynamically based on textColor
+  const logoClass = textColor === 'black'
+    ? `${theme.typography.heading.h5} font-semibold text-black leading-[44px]`
+    : `${theme.typography.heading.h5} font-semibold text-white leading-[44px]`;
+
   return (
-    <nav
-      className={`absolute top-0 left-0 w-full z-30 ${theme.shadows.sm} border-b ${theme.colors.border.strong}
- bg-transparent py-4 px-6`}
-    >
+    <nav className={`absolute top-0 left-0 w-full z-30 border-b ${theme.colors.border.base} bg-transparent py-4 px-6`}>
       <div className={`${theme.spacing.container} flex items-center justify-between`}>
         {/* Logo */}
         <div className="flex items-center">
-          <img src="./assets/navbar/maxenius2.svg" alt="" />          
+          <h5 className={logoClass}>Maxenius</h5>
         </div>
 
         {/* Navigation Links */}
-        <div className="hidden md:flex items-center font-semibold leading-[30px] space-x-8">
-          {navItems.map((item) => (
-            <Link
-              key={item.name}
-              href={item.href}
-              className={`${theme.typography.paragraph.p3} ${theme.colors.text.inverse}`}
-            >
-              {item.name}
-            </Link>
-          ))}
+        <div className="hidden md:flex items-center space-x-8">
+          {navItems.map((item) => {
+            const isActive = pathname === item.href;
+            return (
+              <Link key={item.name} href={item.href} className={linkClass}>
+                {item.name}
+                {isActive && (
+                  <span className="absolute -bottom-7.5 left-0 w-full h-[3px] bg-[#C42630] rounded-full"></span>
+                )}
+              </Link>
+            );
+          })}
         </div>
 
         {/* Let's Talk Button */}
         <div className="flex items-center">
           <button className={theme.components.button.primary}>
             <span className={`${theme.typography.paragraph.p3} leading-[20px] font-bold`}>
-             Let&apos;s Talk
+              Let&apos;s Talk
             </span>
           </button>
         </div>

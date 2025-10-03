@@ -1,5 +1,6 @@
 import { Card, CardContent } from "../../ui/card";
 import { theme } from "../../../config/theme"
+import Image from 'next/image'
 import React from 'react'
 
 const ChooseCard = () => {
@@ -43,7 +44,7 @@ const ChooseCard = () => {
              
               <CardContent className="p-0 flex gap-5 ">
 
-                <img
+                <Image
                 src={card.icon}
                 alt={card.title}
                 className="w-[79px] h-[79px] object-contain"

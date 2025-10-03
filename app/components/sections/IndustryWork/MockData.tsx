@@ -81,6 +81,7 @@ import React from "react";
 import { Card, CardFooter, CardHeader } from "../../ui/card";
 import { ArrowRight } from "lucide-react";
 import { theme } from "../../../config/theme";
+import Image from 'next/image'
 
 const cards = [
   { id: 1, topLeft: "healthcare.png", bottomLeft: "HealthCare", bottomRight: "/01" },
@@ -122,7 +123,7 @@ const MockData = () => {
           {/* Header */}
           <CardHeader className="flex justify-start px-4 pt-4">
             {card.topLeft.endsWith(".png") ? (
-              <img
+              <Image
                 src={`/assets/IndustryWork/${card.topLeft}`}
                 alt={card.bottomLeft}
                 className="w-[33px] h-[33px]"

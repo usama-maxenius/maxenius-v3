@@ -42,6 +42,7 @@
 
 
 import { ArrowUpRight } from "lucide-react";
+import Image from 'next/image'
 import React from "react";
 import { theme } from "../../../config/theme"
 
@@ -77,7 +78,7 @@ const WorkTogether = () => {
 
         {/* Right Content */}
         <div className="w-[30%] pt-30">
-          <img
+          <Image
             src="/assets/WorkTogether/arrowup.svg"
             alt="arrow"
             className="pl-[196px]"

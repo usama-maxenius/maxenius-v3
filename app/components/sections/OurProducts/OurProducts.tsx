@@ -61,7 +61,7 @@
 
 
 
-
+import Image from 'next/image'
 import React from "react";
 import { theme } from "../../../config/theme" // ✅ import theme
 
@@ -115,7 +115,7 @@ const OurProducts = () => {
           {/* Left Side - Image + Button */}
           <div>
             <div className="mt-50">
-              <img
+              <Image
                 src="./assets/ourproducts/dashboard.svg"
                 alt="Dashboard"
                 className="w-[789px] h-[638px]"
