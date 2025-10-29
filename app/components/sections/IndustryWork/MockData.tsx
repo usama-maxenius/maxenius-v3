@@ -123,11 +123,15 @@ const MockData = () => {
           {/* Header */}
           <CardHeader className="flex justify-start px-4 pt-4">
             {card.topLeft.endsWith(".png") ? (
-              <Image
-                src={`/assets/IndustryWork/${card.topLeft}`}
-                alt={card.bottomLeft}
-                className="w-[33px] h-[33px]"
-              />
+             <Image
+  src={`/assets/IndustryWork/${card.topLeft}`}
+  alt={card.bottomLeft || "industry icon"}
+  width={33}
+  height={33}
+  unoptimized
+  className="w-[33px] h-[33px] object-contain"
+/>
+
             ) : (
               <span className={`${theme.typography.paragraph.p2} ${theme.colors.text.inverse} pt-5`}>
                 {card.topLeft}

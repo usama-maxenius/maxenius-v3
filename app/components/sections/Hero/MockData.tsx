@@ -12,14 +12,16 @@ const MockData = () => {
     { id: 4, topLeft: '500+.png', bottomLeft: 'Global Clients', bottomRight: '/04' },
   ];
   return (
-        <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 ${theme.spacing.container} ${theme.spacing.container}  mx-auto`}>
+<div
+  className={`flex flex-wrap justify-center gap-6 ${theme.spacing.container} mx-auto`}
+>
   {cards.map((card, index) => (
     <Card
       key={card.id}
-      className="flex flex-col justify-between" // ✅ Flex column to push footer to bottom
+      className="flex flex-col justify-between 
+                 w-full sm:w-[392px] md:w-[45%] lg:w-[30%] xl:w-[22%]" // ✅ responsive widths
       style={{
-        width: "392px",       // Fixed width
-        height: "227px",      // Fixed height
+        height: "227px",
         border: "none",
         background:
           index === 2
@@ -30,20 +32,29 @@ const MockData = () => {
       <CardHeader>
         <Image
           src={`/assets/herosection/${card.topLeft}`}
-          alt={card.bottomLeft}
+          alt={card.bottomLeft || "icon"}
+          width={64}
+          height={64}
+          unoptimized
           className="object-contain w-16"
         />
       </CardHeader>
 
-      <CardFooter className={`flex ${theme.typography.paragraph.p2} justify-between leading-[30px] font-normal items-center px-4 ${
-    index === 2 ? theme.colors.brand.accent : theme.colors.brand.medium
-  }`} >
+      <CardFooter
+        className={`flex ${theme.typography.paragraph.p2} justify-between leading-[30px] font-normal items-center px-4 ${
+          index === 2
+            ? theme.colors.brand.accent
+            : theme.colors.brand.medium
+        }`}
+      >
         <span className="font-semibold">{card.bottomLeft}</span>
         <span className="font-medium">{card.bottomRight}</span>
       </CardFooter>
     </Card>
   ))}
 </div>
+
+
   )
 }
 

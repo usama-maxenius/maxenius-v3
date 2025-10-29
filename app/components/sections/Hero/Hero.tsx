@@ -187,8 +187,8 @@ const Hero = () => {
 
   return (
     <section
-      className={`relative min-h-screen w-full ${theme.components.section.light} bg-cover bg-center`}
-      style={{ backgroundImage: "url('/assets/herosection/globe.gif')" }}
+      className={`relative min-h-screen w-full ${theme.components.section.light} bg-cover  `}
+      style={{ backgroundImage: "url('/assets/herosection/globe.gif')", backgroundPosition:"top center",backgroundRepeat:'no-repeat' }}
     >
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/50 z-10" />

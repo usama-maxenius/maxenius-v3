@@ -29,10 +29,14 @@ const MockData = () => {
     >
       <CardHeader>
         <Image
-          src={`/assets/herosection/${card.topLeft}`}
-          alt={card.bottomLeft}
-          className="object-contain w-16"
-        />
+  src={`/assets/herosection/${card.topLeft}`}
+  alt={card.bottomLeft}
+  width={64}
+  height={64}
+  unoptimized
+  className="object-contain w-16"
+/>
+
       </CardHeader>
 
       <CardFooter className={`flex ${theme.typography.paragraph.p2} justify-between leading-[30px] font-normal items-center px-4 ${

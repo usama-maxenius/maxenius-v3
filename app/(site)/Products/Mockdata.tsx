@@ -1,6 +1,7 @@
 // app/(site)/OurServices/Mockdata.tsx
 import { Card } from '@components/ui/card'
 import { theme } from '@config/theme'
+import Image from "next/image";
 import React from 'react'
 
 // yahan cards ko export kar diya
@@ -29,7 +30,17 @@ const Mockdata = () => {
             key={index}
             className="flex flex-col items-center rounded-none !gap-0 text-center py-20 px-15  bg-white"
           >
-            <img src={card.icon} alt={card.subtitle} className="w-[160px] h-[160px] " />
+          
+
+<Image
+  src={card.icon}
+  alt={card.subtitle}
+  width={160}
+  height={160}
+  unoptimized
+  className="w-[160px] h-[160px]"
+/>
+
             <h3
               className={`${theme.typography.paragraph.p3}  leading-[24px]  font-normal`}
               style={{

@@ -91,8 +91,8 @@
 
 
 import React from "react";
-import { theme } from '../../../config/theme';
-import Image from 'next/image'
+import { theme } from "../../../config/theme";
+import Image from "next/image";
 import Link from "next/link";
 
 const Footer = () => {
@@ -102,10 +102,11 @@ const Footer = () => {
       style={{ background: theme.colors.background.oval }}
     >
       <div
-        className={`grid grid-cols-5 gap-10 ${theme.spacing.container} pt-15 text-left pl-[40px]`}
+        className={`${theme.spacing.container} pt-15 text-left pl-[40px] grid gap-10
+        lg:grid-cols-5 md:grid-cols-2 sm:grid-cols-2 grid-cols-1`}
       >
         {/* Logo + Text */}
-        <div>
+        <div className="col-span-1 lg:col-span-1 md:col-span-2">
           <ol>
             <li
               className={`text-[33.6px] leading-[100%] ${theme.colors.text.inverse} font-bold mb-4`}
@@ -113,30 +114,22 @@ const Footer = () => {
               Maxenius
             </li>
             <li
-              className={`${theme.typography.paragraph.p3} ${theme.colors.text.inverse} max-w-[300px] font-normal leading-[31.2px] mt-[50px] mx-auto`}
+              className={`${theme.typography.paragraph.p3} ${theme.colors.text.inverse} max-w-[300px] font-normal leading-[31.2px] mt-[50px]`}
             >
               With lots of unique blocks, you can easily build a page without
               coding. Build your next landing page.
             </li>
             <li className="flex gap-10 mt-10">
-              <span>
-                <Image src="/assets/footer/twitter.svg" alt="Twitter" />
-              </span>
-              <span>
-                <Image src="/assets/footer/facebook.svg" alt="Facebook" />
-              </span>
-              <span>
-                <Image src="/assets/footer/instagram.svg" alt="Instagram" />
-              </span>
-              <span>
-                <Image src="/assets/footer/linkedin.svg" alt="LinkedIn" />
-              </span>
+              <Image src="/assets/footer/twitter.svg" alt="Twitter" width={24} height={24} unoptimized />
+              <Image src="/assets/footer/facebook.svg" alt="Facebook" width={24} height={24} unoptimized />
+              <Image src="/assets/footer/instagram.svg" alt="Instagram" width={24} height={24} unoptimized />
+              <Image src="/assets/footer/linkedin.svg" alt="LinkedIn" width={24} height={24} unoptimized />
             </li>
           </ol>
         </div>
 
         {/* Company */}
-        <div className="w-[40%] ml-[55px]">
+        <div>
           <ol
             className={`space-y-8 ${theme.typography.paragraph.p3} ${theme.colors.text.inverse} leading-[31.2px] font-normal`}
           >
@@ -149,7 +142,7 @@ const Footer = () => {
         </div>
 
         {/* Products */}
-        <div className="w-[50%]">
+        <div>
           <ol
             className={`space-y-8 ${theme.typography.paragraph.p3} ${theme.colors.text.inverse} leading-[31.2px] font-normal`}
           >
@@ -186,7 +179,7 @@ const Footer = () => {
       </div>
 
       {/* Contact Us Section */}
-      <div className="max-w-[1300px] mx-auto flex justify-end pt-30">
+      <div className="max-w-[1300px] mx-auto flex justify-end pt-30 px-4">
         <Link href="/contact" passHref>
           <div
             className={`flex items-center w-[421px] h-[80px] rounded-full px-5 gap-4 cursor-pointer`}
@@ -210,6 +203,3 @@ const Footer = () => {
 };
 
 export default Footer;
-
-
-

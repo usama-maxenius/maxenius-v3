@@ -44,26 +44,31 @@ const IndustryWork = () => {
     <section className={`flex justify-center items-center mb-40`}>
       {/* Wrapper with max-width and center */}
       <div
-        className={`${theme.spacing.container} flex justify-center w-full gap-40 mt-[120px]`}
+  className={`${theme.spacing.container} flex flex-col xl:flex-row justify-center w-full gap-20 lg:gap-40 mx-auto items-center mt-[120px]`}
+>
+  {/* Left Side Content */}
+  <div className="w-full lg:w-[40%] pl-0 lg:pl-8 text-center lg:text-left">
+    <div className="flex flex-col gap-4 mt-[-250px]">
+      <h4
+        className={`${theme.typography.heading.h4} w-full lg:w-[80%] leading-[57px] font-semibold ${theme.colors.brand.senior} mx-auto lg:mx-0`}
       >
-        {/* Left Side Content */}
-        <div className="w-[40%] pl-8">
-          <div className="flex flex-col gap-4">
-            <h4  className={`${theme.typography.heading.h4} w-[80%] leading-[57px] font-semibold ${theme.colors.brand.senior}`}>
-              Industries We Work With
-            </h4>
-            <h6 className={`${theme.typography.heading.h6} font-normal pt-10 leading-[47px] ${theme.colors.brand.junior}`}>
-              We provide a complete range of services to turn your great ideas
-              into profitable business solutions
-            </h6>
-          </div>
-        </div>
+        Industries We Work With
+      </h4>
+      <h6
+        className={`${theme.typography.heading.h6} font-normal pt-10 leading-[47px] ${theme.colors.brand.junior} w-full lg:w-auto mx-auto lg:mx-0`}
+      >
+        We provide a complete range of services to turn your great ideas
+        into profitable business solutions
+      </h6>
+    </div>
+  </div>
 
-        {/* Right Side Content */}
-        <div className="w-[60%]">
-          <MockData />
-        </div>
-      </div>
+  {/* Right Side Content */}
+  <div className="w-full lg:w-[60%] mt-10 lg:mt-0">
+    <MockData />
+  </div>
+</div>
+
     </section>
   );
 };

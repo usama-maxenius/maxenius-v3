@@ -1,5 +1,6 @@
 import { Circle } from "lucide-react";
 
+
 // src/config/theme.ts
 export const theme = {
   // 🌈 Brand colors
@@ -13,8 +14,10 @@ export const theme = {
       junior:"text-[#363636]",
       senior:"text-[#0E0E0E]",
       accent: "text-[#FFFFFF]",
+      oval:"text-[#0F0F0F]"
     },
     background: {
+      gray:"#EBEBEB",
       oval:"#0F0F0F",
       circle:"#111111",
       light: "#FFFFFF",
@@ -29,7 +32,8 @@ export const theme = {
     border: {
       base: "border-gray-500",
       strong: "border-gray-800",
-      red:"border-[#C42630]"
+      red:"border-[#C42630]",
+      dark:"border-[#363636]"
     },
     text: {
       base: "text-gray-800",
@@ -40,7 +44,13 @@ export const theme = {
 
   // ✍️ Typography
   typography: {
+    logo:{
+      logo:"text-[37.72px]",
+      
+      
+    },
     heading: {
+      h0:"text-[96px]",
       h1: "text-[122px] ",
       h2: "text-[64px]  ",
       h3: "text-[55px]  ",
@@ -54,6 +64,8 @@ export const theme = {
       p2:"text-[20px] ",
       p3:"text-[18px] ",
       p4:"text-[16px] ",
+      p5:"text-[14px] ",
+      
     },
     body: {
       base: "text-base leading-relaxed text-gray-700",
@@ -95,7 +107,9 @@ export const theme = {
     button: {
       primary: "bg-[#C42630] text-[#FFFFFF]  py-[15px] px-[25px] rounded-full ",
       secondary: "bg-[#FFFFFF]  py-2 px-4 rounded-full  ",
-      thirdly:"bg-[#C42630] text-[#FFFFFF]  py-[25px] px-[25px] rounded-full "
+      thirdly:"bg-[#C42630] text-[#FFFFFF]  py-[25px] px-[25px] rounded-full ",
+      fourth:"bg-[#FFFFFF] text-[#0F0F0F]  py-[8px] px-[13px] rounded-full  ",
+      fifth:"bg-[#1D1D1D] text-[#FFFFFF]  py-[15px] px-[25px] rounded-full "
     },
     card: {
       base: "bg-white border border-gray-200 rounded-2xl shadow-sm p-6",

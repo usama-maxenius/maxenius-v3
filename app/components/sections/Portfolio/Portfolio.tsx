@@ -38,12 +38,16 @@ import { theme } from "../../../config/theme"
 
 const Portfolio = () => {
   return (
-    <section
-      className={`w-full items-center overflow-hidden mb-12 ${theme.spacing.section}`}
-      style={{ background: theme.colors.background.gradient2 }}
+    // <section
+    //   className={`relative w-full items-center  bg-cover bg-center bg-no-repeat   mb-12 ${theme.spacing.section}`}
+    //   style={{ backgroundImage:"url('/assets/portfolio/portfolio.svg')" }}
+    // >
+       <section
+      className={`relative w-full items-center  bg-black   mb-12 ${theme.spacing.section}`}
+      // style={{ backgroundImage:"url('/assets/portfolio/portfolio.svg')" }}
     >
       {/* Header */}
-      <div className={`mt-20  text-center px-6 ${theme.spacing.scontainer} `}>
+      <div className={`mt-0  text-center px-6 ${theme.spacing.scontainer} `}>
         <p
           className={`${theme.typography.paragraph.p2} ${theme.colors.brand.primary} leading-[100%] font-bold`}
         >

@@ -111,72 +111,77 @@ const OurProducts = () => {
 
 
         {/* Content Row */}
-        <div className="flex items-center mx-auto mt-0 gap-30">
-          {/* Left Side - Image + Button */}
-          <div>
-            <div className="mt-50">
-              <Image
-                src="./assets/ourproducts/dashboard.svg"
-                alt="Dashboard"
-                className="w-[789px] h-[638px]"
-              />
-            </div>
+       <div
+  className="flex flex-col xl:flex-row items-center mx-auto mt-0 gap-30 "
+>
+  {/* Left Side - Image + Button */}
+  <div className="w-full lg:w-1/2 flex flex-col items-center lg:items-start ">
+    <div className="mt-10 lg:mt-50">
+      <Image
+        src="/assets/ourproducts/dashboard.svg"
+        alt="Dashboard"
+        width={789}
+        height={638}
+        unoptimized
+        className="w-full max-w-[789px] h-auto"
+      />
+    </div>
 
-            <div className="flex mt-15 justify-center">
-              <button
-                className={` ${theme.colors.text.inverse} ${theme.components.button.primary} ${theme.typography.paragraph.p2}`}
-                
-              >
-                Explore Maxinventory
-              </button>
-            </div>
-          </div>
+    <div className="flex mt-10 justify-center lg:justify-start">
+      <button
+        className={`${theme.colors.text.inverse} ${theme.components.button.primary} ${theme.typography.paragraph.p2}`}
+      >
+        Explore Maxinventory
+      </button>
+    </div>
+  </div>
 
-          {/* Right Side - Text + List */}
-          <div className="w-1/2 text-left">
-            <h2
-              className={`${theme.typography.heading.h5} ${theme.colors.brand.senior} leading-[57px] font-bold`}
-            >
-              Maxinventory System
-            </h2>
-            <p
-              className={`${theme.typography.paragraph.p2} ${theme.colors.brand.junior} font-normal leading-[30px] w-[85%]`}
-            >
-              Lorem ipsum dolor sit amet consectetur. Faucibus mi sit vitae eget
-              tempor erat aliquet ac. Tellus malesuada ut purus quis penatibus
-              donec.
-            </p>
+  {/* Right Side - Text + List */}
+  <div className="w-full lg:w-1/2 text-center lg:text-left mt-10 lg:mt-0">
+    <h2
+      className={`${theme.typography.heading.h5} ${theme.colors.brand.senior} leading-[57px] font-bold`}
+    >
+      Maxinventory System
+    </h2>
+    <p
+      className={`${theme.typography.paragraph.p2} ${theme.colors.brand.junior} font-normal leading-[30px] w-full lg:w-[85%] mx-auto lg:mx-0`}
+    >
+      Lorem ipsum dolor sit amet consectetur. Faucibus mi sit vitae eget
+      tempor erat aliquet ac. Tellus malesuada ut purus quis penatibus
+      donec.
+    </p>
 
-            {/* Features List */}
-            <ol className="pt-14 space-y-4">
-              {[
-                "Reporting and Analytics",
-                "Inventory Forecasting",
-                "Mobile Accessibility",
-                "Track Order",
-                "Save Time",
-              ].map((item, index) => (
-                <li
-                  key={index}
-                  className={`rounded-full py-4  text-[20px] leading-[155%] flex items-center ${theme.typography.paragraph.p2} ${theme.colors.text.inverse}`}
-                  style={{
-                    background: theme.colors.background.dark,
-                    marginLeft: `${index * 2}rem`,
-                    marginRight: `${200 - index * 30}px`,
-                  }}
-                >
-                  <span
-                    className={`px-4 mr-1 ${theme.typography.paragraph.p2} leading-[155%] ml-5 rounded-full`}
-                    style={{ background: "#3D3D3D" }} // ✅ can add to theme if reused
-                  >
-                    {index + 1}
-                  </span>
-                  {item}
-                </li>
-              ))}
-            </ol>
-          </div>
-        </div>
+    {/* Features List */}
+    <ol className="pt-14 space-y-4">
+      {[
+        "Reporting and Analytics",
+        "Inventory Forecasting",
+        "Mobile Accessibility",
+        "Track Order",
+        "Save Time",
+      ].map((item, index) => (
+        <li
+          key={index}
+          className={`rounded-full py-4 text-[20px] leading-[155%] flex items-center justify-center lg:justify-start ${theme.typography.paragraph.p2} ${theme.colors.text.inverse}`}
+          style={{
+            background: theme.colors.background.dark,
+            marginLeft: `${index * 2}rem`,
+            marginRight: `${200 - index * 30}px`,
+          }}
+        >
+          <span
+            className={`px-4 mr-1 ${theme.typography.paragraph.p2} leading-[155%] ml-5 rounded-full`}
+            style={{ background: "#3D3D3D" }}
+          >
+            {index + 1}
+          </span>
+          {item}
+        </li>
+      ))}
+    </ol>
+  </div>
+</div>
+
       </div>
     </section>
   );

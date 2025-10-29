@@ -14,7 +14,13 @@ const MockData2 = () => {
                {/* Left Side */}
                <div className="py-4 w-full sm:w-[300px] bg-transparent border-b  border-r border-white/30">
                  <div className="flex items-start ml-12 space-x-3">
-                   <Image src="/assets/herosection/star.png" alt="star" className="w-6 h-5" />
+                   <Image
+  src="/assets/herosection/star.png"
+  alt="star"
+  width={24}    // ✅ set actual width (ya approx)
+  height={24}   // ✅ set actual height
+  className=""
+/>
                    <span className="text-white  text-lg leading-[22px] font-medium">
                      Trusted by industry leaders
                    </span>
@@ -31,7 +37,14 @@ const MockData2 = () => {
                      key={index}
                      className="w-36 h-12 flex items-center justify-center rounded-full"
                    >
-                     <Image src={`/assets/herosection/${logo}`} alt={logo.replace('.png', '')} />
+                    <Image
+  src={`/assets/herosection/${logo}`}
+  alt={logo.replace('.png', '')}
+  width={120}
+  height={48}
+  className="object-contain"
+/>
+
                    </div>
                  ))}
                </div>

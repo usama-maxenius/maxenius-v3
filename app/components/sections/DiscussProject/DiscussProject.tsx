@@ -53,7 +53,7 @@
 
 
 
-
+import Image from 'next/image'
 import React from "react";
 import { theme } from "../../../config/theme";
 
@@ -64,14 +64,16 @@ const DiscussProject = () => {
     >
       {/* Main container */}
       <div
-        className={`${theme.spacing.container} flex items-center justify-center gap-8 mt-[120px] w-full`}
+        className={`${theme.spacing.container} flex flex-col xl:flex-row items-center justify-center gap-8 mt-[120px] w-full mx-auto mb-[100px]`}
       >
         {/* Left: Image */}
         <div className="w-1/2 flex items-center">
-          <img
+          <Image
             src="/assets/discussproject/Layer_1.png"
             alt="Discuss Project"
-            className="w-[592px] h-[395.82px]"
+            width={592}
+            height={395.82}
+            className="object-contain"
           />
         </div>
 

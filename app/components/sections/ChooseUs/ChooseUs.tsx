@@ -111,14 +111,14 @@ import ChooseCard from "./ChooseCard"
 
 const ChooseUs = () => {
   return (
-    <section
-      className="min-h-screen w-full flex items-center py-20"
-      style={{ background: theme.colors.background.gradient2 }}
-    >
+   <section
+  className="relative w-full min-h-screen bg-cover bg-center bg-no-repeat py-20"
+  style={{ backgroundImage: "url('/assets/chooseus/choose.svg')" }}
+>
       <div className={`${theme.spacing.scontainer} pt-[100px] text-center`}>
         {/* Heading */}
         <p
-          className={`${theme.typography.paragraph.p2} ${theme.colors.brand.primary} leading-[100%] font-bold`}
+          className={`${theme.typography.paragraph.p2} ${theme.colors.brand.primary} leading-[100%] font-bold pt-[100px]`}
         >
           Why choose us
         </p>

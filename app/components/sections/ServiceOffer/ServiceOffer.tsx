@@ -78,134 +78,146 @@ const ServiceOffer = () => {
         </p>
 
         {/* Content Wrapper */}
-        <div className="flex items-center justify-between pt-40 mx-auto max-w-[1600px] px-[20px] gap-[70px]">
-          {/* Left Side */}
-          <div>
-            {/* Card 1 */}
-            <div className="text-left">
-              <Image
-                src="/assets/serviceoffer/ideation.svg"
-                alt="PRODUCT IDEATION"
-              />
-              <p
-                className={`${theme.typography.paragraph.p1} ${theme.colors.brand.senior} leading-[57px] font-semibold`}
-              >
-                PRODUCT IDEATION
-              </p>
-              <p
-                className={`${theme.typography.paragraph.p3} ${theme.colors.brand.junior} leading-[29px] pt-5 w-[55%]`}
-              >
-                We enable agencies to focus on what they do best—by championing
-                the very ideas that made clients seek you out in the first
-                place.
-              </p>
-              <button
-                className={`flex items-center gap-2 mt-5  border ${theme.colors.brand.primary} ${theme.components.button.secondary}`}
-              >
-                Learn Now{" "}
-                <ArrowUpRight
-                  className={`${theme.colors.brand.primary} h-6 w-6`}
-                />
-              </button>
-            </div>
+       <div className={`flex flex-col xl:flex-row items-center justify-between pt-40 mx-auto ${theme.spacing.container} px-[20px] gap-[70px]`}>
+  {/* Left Side */}
+  <div className="flex flex-col items-center lg:items-start">
+    {/* Card 1 */}
+    <div className="text-left mb-10 lg:mb-0">
+      <Image
+        src="/assets/serviceoffer/ideation.svg"
+        alt="PRODUCT IDEATION"
+        width={221}
+        height={80}
+        unoptimized
+        className="object-contain mx-auto lg:mx-0"
+      />
+      <p
+        className={`${theme.typography.paragraph.p1} ${theme.colors.brand.senior} leading-[57px] font-semibold`}
+      >
+        PRODUCT IDEATION
+      </p>
+      <p
+        className={`${theme.typography.paragraph.p3} ${theme.colors.brand.junior} leading-[29px] pt-5 w-[90%] lg:w-[70%]`}
+      >
+        We enable agencies to focus on what they do best—by championing
+        the very ideas that made clients seek you out in the first
+        place.
+      </p>
+      <button
+        className={`flex items-center gap-2 mt-5 border ${theme.colors.brand.primary} ${theme.components.button.secondary}`}
+      >
+        Learn Now{" "}
+        <ArrowUpRight className={`${theme.colors.brand.primary} h-6 w-6`} />
+      </button>
+    </div>
 
-            {/* Card 2 */}
-            <div className="text-left pt-45">
-              <Image
-                src="/assets/serviceoffer/development.svg"
-                alt="PRODUCT DEVELOPMENT"
-              />
-              <p
-                className={`${theme.typography.paragraph.p1} ${theme.colors.brand.senior} leading-[57px] font-semibold`}
-              >
-                PRODUCT DEVELOPMENT
-              </p>
-              <p
-                className={`${theme.typography.paragraph.p3} ${theme.colors.brand.junior} leading-[29px] pt-5 w-[55%]`}
-              >
-                We enable agencies to focus on what they do best—by championing
-                the very ideas that made clients seek you out in the first
-                place.
-              </p>
-              <button
-                className={`flex items-center gap-2 mt-5  border ${theme.colors.brand.primary} ${theme.components.button.secondary}`}
-              >
-                Learn Now{" "}
-                <ArrowUpRight
-                  className={`${theme.colors.brand.primary} h-6 w-6`}
-                />
-              </button>
-            </div>
-          </div>
+    {/* Card 2 */}
+    <div className="text-left pt-10 lg:pt-45">
+      <Image
+        src="/assets/serviceoffer/development.svg"
+        alt="PRODUCT DEVELOPMENT"
+        width={221}
+        height={80}
+        unoptimized
+        className="object-contain mx-auto lg:mx-0"
+      />
+      <p
+        className={`${theme.typography.paragraph.p1} ${theme.colors.brand.senior} leading-[57px] font-semibold`}
+      >
+        PRODUCT DEVELOPMENT
+      </p>
+      <p
+        className={`${theme.typography.paragraph.p3} ${theme.colors.brand.junior} leading-[29px] pt-5 w-[90%] lg:w-[70%]`}
+      >
+        We enable agencies to focus on what they do best—by championing
+        the very ideas that made clients seek you out in the first
+        place.
+      </p>
+      <button
+        className={`flex items-center gap-2 mt-5 border ${theme.colors.brand.primary} ${theme.components.button.secondary}`}
+      >
+        Learn Now{" "}
+        <ArrowUpRight className={`${theme.colors.brand.primary} h-6 w-6`} />
+      </button>
+    </div>
+  </div>
 
-          {/* Middle Image */}
-          <div>
-            <Image
-              src="/assets/serviceoffer/daigram.svg"
-              alt="Daigram"
-              className="w-[500px]"
-            />
-          </div>
+  {/* Middle Image */}
+  <div className="my-10 lg:my-0">
+    <Image
+      src="/assets/serviceoffer/daigram.svg"
+      alt="Daigram"
+      width={500}
+      height={80}
+      unoptimized
+      className="object-contain mx-auto"
+    />
+  </div>
 
-          {/* Right Side */}
-          <div>
-            {/* Card 3 */}
-            <div className="text-left pt-[15px] pl-45">
-              <Image
-                src="/assets/serviceoffer/designing.svg"
-                alt="PRODUCT DESIGNING"
-              />
-              <p
-                className={`${theme.typography.paragraph.p1} ${theme.colors.brand.senior} leading-[57px] font-semibold`}
-              >
-                PRODUCT DESIGNING
-              </p>
-              <p
-                className={`${theme.typography.paragraph.p3} ${theme.colors.brand.junior} leading-[29px] pt-5 w-[55%]`}
-              >
-                We enable agencies to focus on what they do best—by championing
-                the very ideas that made clients seek you out in the first
-                place.
-              </p>
-              <button
-                className={`flex items-center gap-2 mt-5  border ${theme.colors.brand.primary} ${theme.components.button.secondary}`}
-              >
-                Learn Now{" "}
-                <ArrowUpRight
-                  className={`${theme.colors.brand.primary} h-6 w-6`}
-                />
-              </button>
-            </div>
+  {/* Right Side */}
+  <div className="flex flex-col items-center lg:items-start">
+    {/* Card 3 */}
+    <div className="text-left pt-[15px] lg:pl-45">
+      <Image
+        src="/assets/serviceoffer/designing.svg"
+        alt="PRODUCT DESIGNING"
+        width={221}
+        height={80}
+        unoptimized
+        className="object-contain mx-auto lg:mx-0"
+      />
+      <p
+        className={`${theme.typography.paragraph.p1} ${theme.colors.brand.senior} leading-[57px] font-semibold`}
+      >
+        PRODUCT DESIGNING
+      </p>
+      <p
+        className={`${theme.typography.paragraph.p3} ${theme.colors.brand.junior} leading-[29px] pt-5 w-[90%] lg:w-[82%]`}
+      >
+        We enable agencies to focus on what they do best—by championing
+        the very ideas that made clients seek you out in the first
+        place.
+      </p>
+      <button
+        className={`flex items-center gap-2 mt-5 border ${theme.colors.brand.primary} ${theme.components.button.secondary}`}
+      >
+        Learn Now{" "}
+        <ArrowUpRight className={`${theme.colors.brand.primary} h-6 w-6`} />
+      </button>
+    </div>
 
-            {/* Card 4 */}
-            <div className="text-left pt-45 pl-45">
-              <Image
-                src="/assets/serviceoffer/growth.svg"
-                alt="PRODUCT GROWTH & SCALEBILITY"
-              />
-              <p
-                className={`${theme.typography.paragraph.p1} ${theme.colors.brand.senior} leading-[57px] font-semibold`}
-              >
-                PRODUCT GROWTH & SCALEBILITY
-              </p>
-              <p
-                className={`${theme.typography.paragraph.p3} ${theme.colors.brand.junior} leading-[29px] pt-5 w-[55%]`}
-              >
-                We enable agencies to focus on what they do best—by championing
-                the very ideas that made clients seek you out in the first
-                place.
-              </p>
-             <button
-                className={`flex items-center gap-2 mt-5  border ${theme.colors.brand.primary} ${theme.components.button.secondary}`}
-              >
-                Learn Now{" "}
-                <ArrowUpRight
-                  className={`${theme.colors.brand.primary} h-6 w-6`}
-                />
-              </button>
-            </div>
-          </div>
-        </div>
+    {/* Card 4 */}
+    <div className="text-left pt-10 lg:pt-45 lg:pl-45">
+      <Image
+        src="/assets/serviceoffer/growth.svg"
+        alt="PRODUCT GROWTH & SCALEBILITY"
+        width={221}
+        height={80}
+        unoptimized
+        className="object-contain mx-auto lg:mx-0"
+      />
+      <p
+        className={`${theme.typography.paragraph.p1} ${theme.colors.brand.senior} leading-[57px] font-semibold`}
+      >
+        PRODUCT GROWTH & SCALEBILITY
+      </p>
+      <p
+        className={`${theme.typography.paragraph.p3} ${theme.colors.brand.junior} leading-[29px] pt-5 w-[90%] lg:w-[82%]`}
+      >
+        We enable agencies to focus on what they do best—by championing
+        the very ideas that made clients seek you out in the first
+        place.
+      </p>
+      <button
+        className={`flex items-center gap-2 mt-5 border ${theme.colors.brand.primary} ${theme.components.button.secondary}`}
+      >
+        Learn Now{" "}
+        <ArrowUpRight className={`${theme.colors.brand.primary} h-6 w-6`} />
+      </button>
+    </div>
+  </div>
+</div>
+
       </div>
     </section>
   )

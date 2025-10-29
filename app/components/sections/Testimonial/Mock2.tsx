@@ -97,7 +97,7 @@
 "use client";
 
 import React, { useState } from "react";
-import Image from 'next/image'
+import Image from "next/image";
 import { Card, CardContent } from "../../ui/card";
 import { theme } from "../../../config/theme";
 
@@ -130,7 +130,7 @@ const Mock2 = () => {
   const [scrollIndex, setScrollIndex] = useState(maxIndex); // 👈 last dot active by default
 
   return (
-    <div className="relative flex flex-col items-center">
+    <div className="relative flex flex-col items-center flex-wrap">
       {/* Cards */}
       <div className="grid grid-cols-1 mx-auto gap-6">
         {cards.map((card, index) => (
@@ -148,6 +148,9 @@ const Mock2 = () => {
               <Image
                 src={card.left}
                 alt={card.bottom}
+                width={78}
+                height={78}
+                unoptimized
                 className={`w-[78.31px] h-[78.31px] ml-10 -mt-4 rounded-full ${
                   index === 2 ? "opacity-40" : ""
                 }`}
@@ -177,20 +180,22 @@ const Mock2 = () => {
         ))}
       </div>
 
-      {/* ✅ Vertical Dots on the Right Side */}
-     <div className="absolute right-[-50px] top-1/2 -translate-y-1/2 flex flex-col space-y-3">
-    {Array.from({ length: maxIndex + 1 }).map((_, i) => (
-      <span
-        key={i}
-        onClick={() => setScrollIndex(i)}
-        className={`w-4 h-4 rounded cursor-pointer transition-all duration-300 $`}
-        style={{
-          background:
-          scrollIndex === i ? theme.colors.background.red : theme.colors.background.dark
-        }}
-      ></span>
-    ))}
-  </div>
+      {/* ✅ Dots now at bottom center */}
+      <div className="flex justify-center items-center mt-8 space-x-3">
+        {Array.from({ length: maxIndex + 1 }).map((_, i) => (
+          <span
+            key={i}
+            onClick={() => setScrollIndex(i)}
+            className="w-4 h-4 rounded-full cursor-pointer transition-all duration-300"
+            style={{
+              background:
+                scrollIndex === i
+                  ? theme.colors.background.red
+                  : theme.colors.background.dark,
+            }}
+          ></span>
+        ))}
+      </div>
     </div>
   );
 };

@@ -40,23 +40,25 @@ const Testimonial = () => {
   return (
     <section
       className={`w-full border-b ${theme.colors.border.base} overflow-hidden`}
-      style={{ background: theme.colors.background.gradient3 }} // ✅ gradient via theme
+      style={{ background: theme.colors.background.gradient3 }}
     >
-      <div className={`flex ${theme.spacing.container}  justify-center mb-40 mt-60`}>
+      <div
+        className={`flex flex-col xl:flex-row ${theme.spacing.container} justify-center mb-40 mt-60 gap-12 lg:gap-0`}
+      >
         {/* Left Section */}
-        <div className="w-1/2">
+        <div className="w-full lg:w-1/2 text-center lg:text-left">
           <p
-            className={`${theme.typography.paragraph.p2} ${theme.colors.brand.primary} font-bold  leading-[100%]`}
+            className={`${theme.typography.paragraph.p2} ${theme.colors.brand.primary} font-bold leading-[100%]`}
           >
             TESTIMONIALS
           </p>
           <h2
-            className={`w-[80%] ${theme.typography.heading.h2} ${theme.colors.text.inverse}`}
+            className={`w-full lg:w-[80%] ${theme.typography.heading.h2} ${theme.colors.text.inverse} mx-auto lg:mx-0`}
           >
             What Clients Say About Our Services
           </h2>
           <p
-            className={`w-[52%] mt-20 ${theme.typography.paragraph.p2} ${theme.colors.text.inverse} font-normal leading-[30px]`}
+            className={`w-full lg:w-[52%] mt-10 lg:mt-20 ${theme.typography.paragraph.p2} ${theme.colors.text.inverse} font-normal leading-[30px] mx-auto lg:mx-0`}
           >
             Lorem ipsum dolor sit amet consectetur. Faucibus mi sit vitae eget
             tempor erat aliquet ac. Tellus malesuada ut purus quis penatibus
@@ -65,7 +67,7 @@ const Testimonial = () => {
         </div>
 
         {/* Right Section with Mock2 */}
-        <div>
+        <div className="w-full lg:w-auto flex justify-center lg:justify-end mt-10 lg:mt-0">
           <Mock2 />
         </div>
       </div>
@@ -74,3 +76,4 @@ const Testimonial = () => {
 }
 
 export default Testimonial
+
