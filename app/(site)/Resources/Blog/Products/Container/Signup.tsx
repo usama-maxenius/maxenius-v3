@@ -3,7 +3,16 @@ import React from "react";
 
 const Signup = () => {
   return (
-    <section className="bg-white w-[478px] h-[519px] rounded-3xl px-10 py-20 text-left">
+    <section className="
+        bg-white 
+        w-full sm:w-[478px] 
+        h-auto sm:h-[519px] 
+        rounded-3xl 
+        px-6 sm:px-10 
+        py-10 sm:py-20 
+        text-left 
+        mx-auto
+      ">
       <div className=" bg-white w-full mt-[-20px]">
         {/* Heading */}
         <h5 className={`${theme.typography.heading.h5} ${theme.colors.brand.oval} leading-[28px] font-semibold mb-8`}>SIGN UP</h5>
@@ -19,7 +28,14 @@ const Signup = () => {
           <input
             type="text"
             placeholder="Enter Your Name"
-            className={` w-[408] h-[55.77] ${theme.typography.paragraph.p4} ${theme.colors.brand.accent} leading-[47.29px]  rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#C42630]`}
+            className={`
+              w-full sm:w-[408px] 
+              h-[48px] sm:h-[55.77px] 
+              ${theme.typography.paragraph.p4} 
+              ${theme.colors.brand.accent} 
+              rounded-md px-4 py-2 sm:py-3 
+              focus:outline-none focus:ring-2 focus:ring-[#C42630]
+            `}
             style={{
                 background: theme.colors.background.dark
             }}
@@ -28,7 +44,14 @@ const Signup = () => {
           <input
             type="email"
             placeholder="Enter Your Email"
-            className={` w-[408] h-[55.77] ${theme.typography.paragraph.p4} ${theme.colors.brand.accent} leading-[47.29px]  rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#C42630]`}
+             className={`
+              w-full sm:w-[408px] 
+              h-[48px] sm:h-[55.77px] 
+              ${theme.typography.paragraph.p4} 
+              ${theme.colors.brand.accent} 
+              rounded-md px-4 py-2 sm:py-3 
+              focus:outline-none focus:ring-2 focus:ring-[#C42630]
+            `}
             style={{
                 background: theme.colors.background.dark
             }}

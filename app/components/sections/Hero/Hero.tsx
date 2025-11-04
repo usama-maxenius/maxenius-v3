@@ -196,12 +196,12 @@ const Hero = () => {
       {/* Main content */}
       <div className={`relative  z-20  pb-20`}>
         {/* Red Text */}
-        <p className={`${theme.colors.brand.primary} ${theme.spacing.container} ${theme.typography.paragraph.p2} font-semibold text-center leading-[20px] pt-30`}>
+        <p className={`${theme.colors.brand.primary} ${theme.spacing.container} ${theme.typography.paragraph.p2} font-semibold text-center leading-[20px] pt-10 lg:pt-30`}>
           Technology outsourcing agency
         </p>
 
         {/* Heading */}
-        <h1 className={`${theme.colors.brand.accent} ${theme.spacing.container}  ${theme.typography.heading.h1} leading-[135px] font-semibold text-center mb-15 my-6`}>
+        <h1 className={`${theme.colors.brand.accent} ${theme.spacing.container} ${theme.typography.heading.h3} md:text-[96px]  lg:text-[122px] leading-[80px] lg:leading-[135px] font-semibold text-center mb-15 my-6`}>
           Expert Insights On Everything Tech
         </h1>
 

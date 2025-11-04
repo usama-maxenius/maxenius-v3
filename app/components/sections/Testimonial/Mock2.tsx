@@ -127,23 +127,23 @@ const Mock2 = () => {
   ];
 
   const maxIndex = cards.length - 1;
-  const [scrollIndex, setScrollIndex] = useState(maxIndex); // 👈 last dot active by default
+  const [scrollIndex, setScrollIndex] = useState(maxIndex);
 
   return (
-    <div className="relative flex flex-col items-center flex-wrap">
+    <div className="relative flex flex-col items-center flex-wrap px-4 sm:px-6">
       {/* Cards */}
       <div className="grid grid-cols-1 mx-auto gap-6">
         {cards.map((card, index) => (
           <Card
             key={card.id}
-            className="w-[792px] h-[225px] relative"
+            className="w-full sm:w-[620px] lg:w-[792px] min-h-[300px] lg:h-[225px] relative rounded-2xl"
             style={
               index === 2
                 ? { background: "rgba(29,29,29,0.4)", border: "none" }
                 : { background: theme.colors.background.dark, border: "none" }
             }
           >
-            <CardContent className="flex items-center gap-10 h-full">
+            <CardContent className="flex flex-col sm:flex-row items-center sm:items-start gap-6 sm:gap-10 h-full p-6 sm:p-8">
               {/* Image */}
               <Image
                 src={card.left}
@@ -151,26 +151,26 @@ const Mock2 = () => {
                 width={78}
                 height={78}
                 unoptimized
-                className={`w-[78.31px] h-[78.31px] ml-10 -mt-4 rounded-full ${
+                className={`w-[70px] h-[70px] sm:w-[78px] sm:h-[78px] rounded-full ${
                   index === 2 ? "opacity-40" : ""
                 }`}
               />
 
-              {/* Text beside image */}
+              {/* Text */}
               <div
-                className={`flex flex-col justify-center h-full ${
+                className={`flex flex-col justify-center h-full text-left ${
                   index === 0 || index === 1
                     ? theme.colors.text.inverse
                     : theme.colors.brand.medium
                 }`}
               >
                 <span
-                  className={`${theme.typography.paragraph.p2} mt-10 w-[90%] font-normal leading-[30px]`}
+                  className={`${theme.typography.paragraph.p2}  w-full sm:w-[90%] font-normal leading-[30px]  `}
                 >
                   {card.descrption}
                 </span>
                 <span
-                  className={`${theme.typography.paragraph.p3} mt-7 leading-[29px] font-semibold`}
+                  className={`${theme.typography.paragraph.p3} leading-[29px] font-semibold mt-30`}
                 >
                   {card.bottom}
                 </span>
@@ -180,13 +180,13 @@ const Mock2 = () => {
         ))}
       </div>
 
-      {/* ✅ Dots now at bottom center */}
+      {/* Dots */}
       <div className="flex justify-center items-center mt-8 space-x-3">
         {Array.from({ length: maxIndex + 1 }).map((_, i) => (
           <span
             key={i}
             onClick={() => setScrollIndex(i)}
-            className="w-4 h-4 rounded-full cursor-pointer transition-all duration-300"
+            className="w-3 h-3 sm:w-4 sm:h-4 rounded-full cursor-pointer transition-all duration-300"
             style={{
               background:
                 scrollIndex === i

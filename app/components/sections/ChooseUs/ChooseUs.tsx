@@ -112,18 +112,21 @@ import ChooseCard from "./ChooseCard"
 const ChooseUs = () => {
   return (
    <section
-  className="relative w-full min-h-screen bg-cover bg-center bg-no-repeat py-20"
-  style={{ backgroundImage: "url('/assets/chooseus/choose.svg')" }}
+  className={`relative w-full min-h-screen  py-5`}
+  // style={{ backgroundImage: "url('/assets/chooseus/choose.svg')" }}
+  style={{
+    background: theme.colors.background.gradient2
+  }}
 >
-      <div className={`${theme.spacing.scontainer} pt-[100px] text-center`}>
+      <div className={`${theme.spacing.scontainer}  text-center`}>
         {/* Heading */}
         <p
-          className={`${theme.typography.paragraph.p2} ${theme.colors.brand.primary} leading-[100%] font-bold pt-[100px]`}
+          className={`${theme.typography.paragraph.p2} ${theme.colors.brand.primary} leading-[100%] font-bold pt-[50px]`}
         >
           Why choose us
         </p>
         <h2
-          className={`${theme.typography.heading.h2} ${theme.colors.text.inverse} w-[90%] leading-[60px] mx-auto font-semibold mt-4 mb-12`}
+          className={`${theme.typography.heading.h3} lg:${theme.typography.heading.h2} ${theme.colors.text.inverse} w-[90%] leading-[60px] mx-auto font-semibold mt-4 mb-12`}
         >
           People choose us because we serve the best for everyone
         </h2>

@@ -6,19 +6,19 @@ import Services from './Services/Services';
 
 const ProductDesign = () => {
   return (
-    <section className={`w-full items-center overflow-hidden bg-cover bg-no-repeat bg-center ${theme.spacing.section}`}
+    <section className={`w-full items-center overflow-hidden bg-cover bg-no-repeat bg-center py-5`}
     style={{backgroundImage:"url('/assets/productdesign/designback.svg')"}}>
       
-      <div className={`text-center ${theme.spacing.section} ${theme.spacing.container}`}>
-        <h1 className={`${theme.typography.heading.h0} ${theme.colors.brand.accent} mx-auto mt-40 text-start w-[70%] font-semibold leading-[114px]`}>We Offer Product Design and Solution Services</h1>
-        <div className='flex items-center justify-center mx-auto mt-10 w-full'>
-          <div className={`w-[40%]`}>
-        <p className={`${theme.typography.paragraph.p2} ${theme.colors.brand.accent} font-normal text-start w-[100%] xl:w-[70%]   leading-[30px]`}>Lorem ipsum dolor sit amet consectetur. Tincidunt fusce lectus mauris scelerisque velit. Mi scelerisque aenean pellentesque tortor egestas praesent orci enim</p>
+      <div className={`text-center px-5 ${theme.spacing.container}`}>
+        <h1 className={`${theme.typography.heading.h3} lg:text-[96px] ${theme.colors.brand.accent} mx-auto mt-40 text-start lg:w-[70%] font-semibold leading-[80px] lg:leading-[114px]`}>We Offer Product Design and Solution Services</h1>
+        <div className='flex flex-col lg:flex-row lg:items-center lg:justify-center mx-auto mt-10 w-full'>
+          <div className={`lg:w-[40%]`}>
+        <p className={`${theme.typography.paragraph.p2} ${theme.colors.brand.accent} font-normal text-start w-[100%] lg:w-[70%]  lg:mb-0 leading-[30px]`}>Lorem ipsum dolor sit amet consectetur. Tincidunt fusce lectus mauris scelerisque velit. Mi scelerisque aenean pellentesque tortor egestas praesent orci enim</p>
         </div>
         <div
   className={`
-    w-[30%] mt-[-130px] ml-[-54px] 
-    hidden lg:block
+    w-[30%] mt-[-230px] lg:mt-[-130px] ml-[80%] lg:ml-[-54px] 
+    
   
   `}
 >
@@ -27,14 +27,14 @@ const ProductDesign = () => {
     alt="Arrow"
     width={141.76}
     height={1.01}
-    className=" h-auto"  /* ✅ makes it responsive */
+    className="w-[50px] md:w-[80px] lg:w-[141.76px] h-auto mb-50 lg:mb-0"  /* ✅ makes it responsive */
   />
 </div>
 
       </div>
       </div>
 
-      <div className={`flex justify-center mx-auto`}>
+      <div className={`flex justify-center mx-auto mt-20`}>
         <Image src="/assets/productdesign/video.svg"
         alt='Video'
         width={1489.99}

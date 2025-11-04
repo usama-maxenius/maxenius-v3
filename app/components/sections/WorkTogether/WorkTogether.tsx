@@ -85,7 +85,7 @@ const WorkTogether = () => {
             width={400}
             height={50}
             unoptimized
-            className="lg:pl-[196px] mb-8"
+            className="w-[100px] md:w-[200px] lg:w-[400px] lg:pl-[196px] mb-8"
           />
 
           <p

@@ -31,10 +31,14 @@ const Cards = () => {
       {cards.map((card, index) => (
         <div
           key={index}
-          className="flex items-center w-[325px] h-[100px] "
+          className="
+            flex flex-col sm:flex-row items-center sm:items-start
+            w-full sm:w-[325px] h-auto sm:h-[100px] gap-4 sm:gap-0
+            mx-auto
+          "
         >
           {/* Left Image */}
-          <div className="flex-shrink-0">
+          <div className="flex-shrink-0 w-full lg:w-[120px] h-[100px] flex justify-center items-center">
             <Image
               src={card.left}
               alt={card.Title}
@@ -45,11 +49,19 @@ const Cards = () => {
           </div>
 
           {/* Right Text */}
-          <div className="flex flex-col h-full pl-4 py-2 text-start">
-            <h3 className={`${theme.typography.paragraph.p3} ${theme.colors.brand.accent} font-semibold leading-[24.58px] mt-[-10px] mb-[10px]`}>
+          <div className="flex flex-col text-center sm:text-left sm:h-full sm:pl-4">
+            <h3
+              className={`${theme.typography.paragraph.p3} ${theme.colors.brand.accent} 
+              font-semibold leading-[24.58px] mb-[6px] sm:mt-[-10px]`}
+            >
               {card.Title}
             </h3>
-            <p className={`${theme.typography.paragraph.p5} ${theme.colors.brand.accent} font-normal leading-[20px] opacity-[50%]`}>{card.Content}</p>
+            <p
+              className={`${theme.typography.paragraph.p5} ${theme.colors.brand.accent} 
+              font-normal leading-[20px] opacity-[50%]`}
+            >
+              {card.Content}
+            </p>
           </div>
         </div>
       ))}

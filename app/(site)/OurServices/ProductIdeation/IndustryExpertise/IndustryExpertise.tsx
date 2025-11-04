@@ -1,3 +1,4 @@
+'use client'
 import { theme } from '@config/theme'
 import { Check } from 'lucide-react'
 import React from 'react'
@@ -17,7 +18,9 @@ const IndustryExpertise = () => {
             Lorem ipsum dolor sit amet consectetur. Faucibus mi sit vitae eget tempor erat aliquet ac.
             Tellus malesuada ut purus quis penatibus donec.
           </p>
-          <ol className="pt-35 space-y-4">
+       <ol
+  className="pt-35 space-y-4 sm:mx-0 mx-auto w-fit"
+>
   {[
     "E-commerce",
     "EdTech",
@@ -34,10 +37,19 @@ const IndustryExpertise = () => {
         marginRight: `${400 - index * 30}px`,
       }}
     >
+      <style jsx>{`
+        @media (max-width: 640px) {
+          li {
+            margin-left: 0 !important;
+            margin-right: 0 !important;
+          }
+        }
+      `}</style>
+
       <span
         className={`px-4 mr-3 ${theme.typography.paragraph.p2} leading-[155%] ml-5 rounded-full text-white`}
         style={{
-          background: index === 0 ? '#C42630' : '#3D3D3D', // 🔴 first = red, others = gray
+          background: index === 0 ? "#C42630" : "#3D3D3D",
         }}
       >
         {index + 1}
@@ -47,10 +59,13 @@ const IndustryExpertise = () => {
   ))}
 </ol>
 
+
+
+
         </div>
 
         {/* Right Content */}
-        <div className="w-full md:w-1/2 text-center md:text-left">
+        <div className="w-full md:w-1/2  md:text-left">
           <h4 className={`${theme.typography.heading.h4} ${theme.colors.brand.senior} leading-[53px] font-semibold mb-5`}>
             E-commerce
           </h4>
@@ -71,10 +86,15 @@ const IndustryExpertise = () => {
                 className={`flex items-center gap-4 ${theme.typography.paragraph.p2} ${theme.colors.brand.junior} font-normal`}
               >
                 {/* Tick inside Circle */}
-                <span className={`flex items-center justify-center w-8 h-8 rounded-full border ${theme.colors.border.dark} ${theme.colors.brand.junior} flex-shrink- 0`}>
-                  <Check size={16} strokeWidth={3} />
+                <span className={`flex  justify-center w-8 h-8 rounded-full border ${theme.colors.border.dark} ${theme.colors.brand.junior} flex-shrink- 0`}
+                style={{
+                  minHeight:"30px",
+                  minWidth:"30px"
+                }}
+                >
+                  <Check   strokeWidth={3} />
                 </span>
-                <span className="leading-[32px]">{item}</span>
+                <span className="leading-[32px] ">{item}</span>
               </li>
             ))}
           </ol>

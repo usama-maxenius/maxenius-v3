@@ -5,7 +5,7 @@ import React from 'react'
 const Page = () => {
   return (
     <section
-      className={`${theme.spacing.section}`}
+      className={`py-30`}
       style={{
         background: theme.colors.background.gradient3,
       }}
@@ -16,7 +16,7 @@ const Page = () => {
       >
         <div className={`mt-20 mx-auto`}>
           <h1
-            className={`${theme.typography.heading.h1} ${theme.colors.brand.accent} w-[40%] flex justify-center items-center mx-auto leading-[120px] font-bold  `}
+            className={`${theme.typography.heading.h2} md:text-[96px] lg:text-[120px] ${theme.colors.brand.accent} w-[40%] flex justify-center items-center mx-auto leading-[80px] lg:leading-[120px] font-bold  `}
           >
             GET STARTED
           </h1>
@@ -35,7 +35,7 @@ const Page = () => {
             alt="Diamond decoration"
             width={332}
             height={445}
-            className="absolute right-1/20 top-[70%] max-w-[1000px] z-0 opacity-70"
+            className="absolute right-1/70 top-[70%] max-w-[1000px] z-0 opacity-70  w-[150px] md:w-[280px] lg:w-[332px]"
           />
 
           {/* Form */}

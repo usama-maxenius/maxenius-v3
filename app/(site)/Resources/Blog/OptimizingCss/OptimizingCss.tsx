@@ -29,7 +29,7 @@ const cards = [
 const OptimizingCss = () => {
   return (
     <section
-      className={`${theme.spacing.section} flex justify-center items-center min-h-screen`}
+      className={`${theme.spacing.section} flex justify-center items-center`}
     >
       <div
         className={`${theme.spacing.container} flex flex-col lg:flex-row justify-center items-center w-[85%] gap-10`}

@@ -110,7 +110,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { theme } from "../../../config/theme";
 
-// ✅ Default cards
 const defaultCards = [
   {
     id: 1,
@@ -150,7 +149,6 @@ const defaultCards = [
   },
 ];
 
-// ✅ Card type
 interface Card {
   id: number;
   right: string;
@@ -160,24 +158,41 @@ interface Card {
   link: string;
 }
 
-// ✅ Props type
 interface SliderProps {
-  cardsData?: Card[]; // optional custom cards
+  cardsData?: Card[];
 }
 
 const Slider: React.FC<SliderProps> = ({ cardsData }) => {
-  // ✅ Always fallback to default cards if prop is missing or empty
   const cards =
     Array.isArray(cardsData) && cardsData.length > 0
       ? cardsData
       : defaultCards;
 
   const [scrollIndex, setScrollIndex] = useState(0);
-  const visibleCards = 2;
-  const cardWidth = 675;
+  const [visibleCards, setVisibleCards] = useState(2);
+  const [cardWidth, setCardWidth] = useState(675); // default desktop width
+
+  // ✅ Handle resize safely after mount
+  useEffect(() => {
+    const updateLayout = () => {
+      if (window.innerWidth < 768) {
+        setVisibleCards(1);
+        setCardWidth(window.innerWidth);
+      } else {
+        setVisibleCards(2);
+        setCardWidth(675);
+      }
+    };
+
+    updateLayout(); // initial
+    window.addEventListener("resize", updateLayout);
+    return () => window.removeEventListener("resize", updateLayout);
+  }, []);
+
   const totalMove = cardWidth;
   const maxIndex = cards.length - visibleCards;
 
+  // ✅ Auto-scroll
   useEffect(() => {
     const interval = setInterval(() => {
       setScrollIndex((prev) => (prev === maxIndex ? 0 : prev + 1));
@@ -200,8 +215,11 @@ const Slider: React.FC<SliderProps> = ({ cardsData }) => {
           {cards.map((card) => (
             <div
               key={card.id}
-              className="flex-shrink-0 p-4 basis-1/2"
-              style={{ width: `${cardWidth}px`, height: "549px" }}
+              className="flex-shrink-0 p-4"
+              style={{
+                width: `${cardWidth}px`,
+                height: "100%",
+              }}
             >
               <div
                 className={`rounded-lg flex flex-col h-full ${theme.shadows.md}`}
@@ -210,9 +228,9 @@ const Slider: React.FC<SliderProps> = ({ cardsData }) => {
                   padding: "24px",
                 }}
               >
-                <div className="flex flex-1">
+                <div className="flex flex-col md:flex-row flex-1">
                   {/* Left Side */}
-                  <div className="w-1/2 flex flex-col pt-[15px]">
+                  <div className="md:w-1/2 w-full flex flex-col pt-[15px]">
                     <Image
                       src={card.topLeft}
                       alt="Top Left"
@@ -223,14 +241,14 @@ const Slider: React.FC<SliderProps> = ({ cardsData }) => {
                     />
 
                     <p
-                      className={`${theme.typography.paragraph.p3} ${theme.colors.brand.secondary} mt-20 w-[65%] leading-[25px]`}
+                      className={`${theme.typography.paragraph.p3} ${theme.colors.brand.secondary} mt-10 md:mt-20 md:w-[65%] leading-[25px]`}
                     >
                       {card.descrption}
                     </p>
 
                     <Link href={card.link}>
                       <button
-                        className={`flex items-center justify-center ${theme.components.button.primary} mt-[50px] w-[155px]`}
+                        className={`flex items-center justify-center ${theme.components.button.primary} mt-[30px] md:mt-[50px] w-[155px]`}
                       >
                         <span
                           className={`${theme.typography.paragraph.p3} ${theme.colors.brand.accent} leading-[20px]`}
@@ -242,7 +260,7 @@ const Slider: React.FC<SliderProps> = ({ cardsData }) => {
                   </div>
 
                   {/* Right Side */}
-                  <div className="w-1/2 flex items-center justify-center">
+                  <div className="md:w-1/2 w-full flex items-center justify-center mt-6 md:mt-0">
                     <Image
                       src={card.right}
                       alt="Right Image"
@@ -260,16 +278,12 @@ const Slider: React.FC<SliderProps> = ({ cardsData }) => {
       </div>
 
       {/* Dots */}
-      <div className="flex justify-center mt-20 space-x-3">
-        {Array.from({ length: maxIndex + 1 }).map((_, i) => (
+      <div className="flex justify-center mt-10 space-x-3">
+        {Array.from({ length: cards.length }).map((_, i) => (
           <span
             key={i}
             onClick={() => setScrollIndex(i)}
-            className={`w-4 h-4 rounded-full cursor-pointer transition-all duration-300 ${
-              scrollIndex === i
-                ? theme.colors.brand.primary
-                : theme.colors.brand.medium
-            }`}
+            className={`w-4 h-4 rounded-full cursor-pointer transition-all duration-300`}
             style={{
               backgroundColor:
                 scrollIndex === i
@@ -284,4 +298,3 @@ const Slider: React.FC<SliderProps> = ({ cardsData }) => {
 };
 
 export default Slider;
-

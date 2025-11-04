@@ -61,7 +61,7 @@ const ServiceOffer = () => {
     <section
       className={`min-h-screen w-full flex items-center justify-center ${theme.spacing.section} `}
     >
-      <div className="text-center mx-auto">
+      <div className="text-start lg:text-center  lg:mx-auto">
         {/* Heading */}
         <h3
           className={`${theme.typography.heading.h3} ${theme.colors.brand.senior} font-semibold leading-[57px]`}
@@ -71,7 +71,7 @@ const ServiceOffer = () => {
 
         {/* Description */}
         <p
-          className={`${theme.typography.paragraph.p1} ${theme.colors.brand.junior} leading-[39px] font-medium pt-10 w-[65%] mx-auto`}
+          className={`${theme.typography.paragraph.p1} ${theme.colors.brand.junior} leading-[39px] font-medium pt-10  lg:w-[65%] lg:mx-auto`}
         >
           We enable agencies to focus on what they do best—by championing the
           very ideas that made clients seek you out in the first place.

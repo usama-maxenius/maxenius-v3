@@ -7,7 +7,7 @@ const MinRead = () => {
   return (
     <section>
         <div className={`flex flex-col xl:flex-row justify-center items-center gap-20 mx-auto`}>
-            <div className={`text-start w-[55%] `}>
+            <div className={`text-start lg:w-[55%] `}>
                 <Image src="/assets/blog/frame.svg"
                 alt="Frame"
                 width={601}

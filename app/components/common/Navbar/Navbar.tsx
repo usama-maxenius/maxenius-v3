@@ -87,6 +87,9 @@ const Navbar = ({ textColor = 'white' }: NavbarProps) => {
       ? `${theme.typography.logo.logo} ${plusJakarta.className} font-semibold text-black leading-[44px]`
       : `${theme.typography.logo.logo} ${plusJakarta.className} font-semibold text-white leading-[44px]`
 
+  // ✅ icon color dynamic
+  const iconColor = textColor === 'black' ? 'text-black' : 'text-white'
+
   return (
     <nav
       className={`absolute top-0 left-0 w-full z-30 border-b ${theme.colors.border.base} bg-transparent py-4 px-6`}
@@ -97,7 +100,7 @@ const Navbar = ({ textColor = 'white' }: NavbarProps) => {
           <h5 className={`${logoClass} cursor-pointer`}>Maxenius</h5>
         </Link>
 
-        {/* Desktop Nav (visible only on lg and above) */}
+        {/* Desktop Nav */}
         <div className="hidden lg:flex items-center space-x-8">
           {navItems.map((item) => {
             const isActive = pathname === item.href
@@ -114,17 +117,17 @@ const Navbar = ({ textColor = 'white' }: NavbarProps) => {
 
         {/* Right Section */}
         <div className="flex items-center gap-4">
-          {/* Let's Talk Button (Desktop only) */}
+          {/* Let's Talk (desktop) */}
           <button className={`hidden lg:block ${theme.components.button.primary}`}>
             <span className={`${theme.typography.paragraph.p3} leading-[20px] font-bold`}>
               Let&apos;s Talk
             </span>
           </button>
 
-          {/* Hamburger Menu Icon (Mobile & Tablet only) */}
+          {/* ✅ Hamburger Icon (dynamic color) */}
           <button
             onClick={() => setMenuOpen(!menuOpen)}
-            className="block lg:hidden text-white focus:outline-none"
+            className={`block lg:hidden focus:outline-none ${iconColor}`}
             aria-label="Toggle menu"
           >
             {menuOpen ? <X size={28} /> : <Menu size={28} />}
@@ -132,16 +135,22 @@ const Navbar = ({ textColor = 'white' }: NavbarProps) => {
         </div>
       </div>
 
-      {/* Mobile Dropdown (below lg) */}
+      {/* ✅ Mobile Dropdown (dynamic bg based on theme) */}
       {menuOpen && (
-        <div className="block lg:hidden mt-4 bg-[#1D1D1D] rounded-lg py-4 px-6 space-y-4">
+        <div
+          className={`block lg:hidden mt-4 rounded-lg py-4 px-6 space-y-4 ${
+            textColor === 'black' ? 'bg-white' : 'bg-[#1D1D1D]'
+          }`}
+        >
           {navItems.map((item) => {
             const isActive = pathname === item.href
             return (
               <Link
                 key={item.name}
                 href={item.href}
-                className={`${linkClass} block text-white`}
+                className={`${linkClass} block ${
+                  textColor === 'black' ? 'text-black' : 'text-white'
+                }`}
                 onClick={() => setMenuOpen(false)}
               >
                 {item.name}
@@ -152,7 +161,7 @@ const Navbar = ({ textColor = 'white' }: NavbarProps) => {
             )
           })}
 
-          {/* Let's Talk Button inside dropdown */}
+          {/* Let's Talk inside dropdown */}
           <button
             className={`w-full ${theme.components.button.primary}`}
             onClick={() => setMenuOpen(false)}

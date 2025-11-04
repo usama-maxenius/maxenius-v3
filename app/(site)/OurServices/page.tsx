@@ -2,7 +2,8 @@ import React from 'react'
 // import ProductDesign from './ProductDesign/ProductDesign'
 import Mockdata from './Mockdata'
 import Navbar from '@components/common/Navbar'
-import Background from '@components/sections/Background/Background'
+
+import Hero from '@components/sections/Hero'
 
 
 
@@ -18,8 +19,15 @@ export default function Page() {
         <div className=" mx-auto text-center">
           
           
-          <Mockdata />
-          <Background/>
+        <div className="relative z-10">
+  <Mockdata />
+</div>
+
+<div className="relative z-0  -mt-100">
+  <Hero />
+</div>
+
+
         </div>
       </section>
     </>

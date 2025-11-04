@@ -35,7 +35,10 @@ export const cards = [
 
 const Mockdata = () => {
   return (
-    <div className="w-full flex justify-center pt-10">
+    <div className="w-full flex justify-center pt-8 lg:pt-10 "
+    style={{
+      background: theme.colors.background.light
+    }}>
       <div className={`grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 ${theme.spacing.container}`}>
         {cards.map((card, index) => (
           <Card

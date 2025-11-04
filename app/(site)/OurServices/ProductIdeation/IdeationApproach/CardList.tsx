@@ -19,7 +19,7 @@ const CardList: React.FC<CardListProps> = ({ cards, className = '' }) => {
       {cards.map((card, index) => (
         <div
           key={index}
-          className="flex items-center w-[594px] h-[159px] mb-30 bg-transparent border-none"
+          className="flex flex-col lg:flex-row items-center w-[300px] lg:w-[594px] h-[159px] mb-80 lg:mb-30 bg-transparent border-none"
         >
           {/* Left Image */}
           <div className="flex-shrink-0 w-[120px] h-[120px]  flex justify-center">

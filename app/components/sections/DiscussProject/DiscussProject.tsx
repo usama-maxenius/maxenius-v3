@@ -78,15 +78,15 @@ const DiscussProject = () => {
         </div>
 
         {/* Right: Text */}
-        <div className="w-[45%] flex">
-          <div className="flex flex-col gap-4 mt-25 text-left w-[90%]">
+        <div className="w-[100%] md:w-[45%] lg:w-[45%] flex">
+          <div className="flex flex-col gap-4 mt-25 text-left lg:w-[90%]">
             {/* Small top text */}
             <p className={`${theme.typography.paragraph.p3} font-normal leading-[22px]`}>
               Let&apos;s Discuss Your Project
             </p>
 
             {/* Heading */}
-            <h4 className={`${theme.typography.heading.h4} leading-[60px] font-semibold `}>
+            <h4 className={`${theme.typography.heading.h5} lg:${theme.typography.heading.h4} leading-[60px]  font-semibold `}>
               Feel empowered and supported by a team of dedicated professionals
               who are committed to your success.
             </h4>

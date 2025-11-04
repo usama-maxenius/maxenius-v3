@@ -14,11 +14,11 @@ const DesignWork = () => {
             <LaptopCard/>
         </div>
         <div>
-            <h3 className={`${theme.typography.heading.h3} ${theme.colors.brand.senior} mt-4 mb-12 font-semibold w-[50%] mx-auto leading-[60px]`}>Our Product Design Process</h3>
+            <h3 className={`${theme.typography.heading.h3} ${theme.colors.brand.senior} mt-4 mb-25  lg:mb-12 font-semibold lg:w-[50%] mx-auto leading-[60px]`}>Our Product Design Process</h3>
         </div>
         <div className="flex flex-col xl:flex-row justify-center items-center gap-16 mt-10">
   {/* Left Text Column */}
-  <div className="text-right  space-y-19 mt-[-40px]">
+  <div className="text-left lg:text-right  space-y-19 mt-[-40px]">
     <p className={`${theme.colors.brand.junior} ${theme.typography.paragraph.p3} leading-[29px] w-[100%] font-normal`}>
       This initial phase involves understanding the market, identifying user needs, and gathering insights.
     </p>

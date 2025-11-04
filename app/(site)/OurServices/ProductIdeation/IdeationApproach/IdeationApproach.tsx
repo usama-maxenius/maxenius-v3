@@ -140,25 +140,29 @@ const IdeationApproach = () => {
 
   return (
     <section
-      className={`${theme.spacing.section} relative overflow-hidden`}
+      className={`py-10  relative overflow-hidden`}
+
       style={{
-        backgroundImage: "url('/assets/productideation/ideationapproachback.svg')",
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-        paddingTop: '400px',   // ✅ prevents top overflow
-        paddingBottom: '120px' // ✅ keeps spacing at bottom consistent
+        background: theme.colors.background.gradient2
       }}
+      // style={{
+      //   backgroundImage: "url('/assets/productideation/ideationapproachback.svg')",
+      //   backgroundSize: 'cover',
+      //   backgroundPosition: 'center',
+      //   backgroundRepeat: 'no-repeat',
+      //   paddingTop: '400px',   // ✅ prevents top overflow
+      //   paddingBottom: '120px' // ✅ keeps spacing at bottom consistent
+      // }}
     >
-      <div className={` ${theme.spacing.container} flex justify-between mx-0 items-start gap-32 flex-wrap `}>
+      <div className={`max-w-[1400px] flex flex-col 2xl:flex-row justify-between  items-start mx-auto gap-0 `}>
         {/* Left Column */}
         <div className="flex flex-col items-start">
           <h3
-            className={`${theme.typography.heading.h3} ${theme.colors.brand.accent} font-semibold leading-[60px] w-[75%] mb-20`}
+            className={`${theme.typography.heading.h3} ${theme.colors.brand.accent} lg:w-[70%] font-semibold leading-[60px] mb-10`}
           >
             Product Ideation Approach
           </h3>
-          <CardList cards={card1} className='mt-38'/>
+          <CardList cards={card1} className='mt-0 lg:mt-38'/>
         </div>
 
         {/* Right Column */}

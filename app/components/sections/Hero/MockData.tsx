@@ -18,7 +18,7 @@ const MockData = () => {
   {cards.map((card, index) => (
     <Card
       key={card.id}
-      className="flex flex-col justify-between 
+      className="flex flex-col justify-between mr-5 ml-5
                  w-full sm:w-[392px] md:w-[45%] lg:w-[30%] xl:w-[22%]" // ✅ responsive widths
       style={{
         height: "227px",

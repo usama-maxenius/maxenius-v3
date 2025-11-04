@@ -5,20 +5,20 @@ import React from "react";
 const Technologies = () => {
   return (
     <section
-      className={`mt-20 text-center bg-black px-6 ${theme.spacing.section}`}
+      className={`mt-20 text-center bg-black px-4 py-10`}
     >
       <div
-        className={`flex  items-center justify-between mx-auto  ${theme.spacing.container}`}
+        className={`flex flex-col lg:flex-row   items-center justify-between mx-auto  ${theme.spacing.container}`}
       >
         {/* Left Text Section */}
-        <div className="w-full md:w-[45%] text-left">
+        <div className="w-full lg:w-[50%] text-left">
           <h3
-            className={`${theme.typography.heading.h3} ${theme.colors.brand.accent} font-semibold leading-[60px]`}
+            className={`text-[40px] lg:${theme.typography.heading.h3} ${theme.colors.brand.accent} font-semibold leading-[60px] mb-10`}
           >
             UI and UX Designing Tools and Technologies
           </h3>
           <p
-            className={`${theme.typography.paragraph.p2} ${theme.colors.brand.accent} mt-10 md:mt-20 w-[80%] md:w-[60%] font-medium leading-[30px]`}
+            className={`${theme.typography.paragraph.p2} ${theme.colors.brand.accent} mt-10 md:mt-20  lg:w-[70%] font-medium leading-[30px] mb-20`}
           >
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry&apos;s  standard.
@@ -26,7 +26,7 @@ const Technologies = () => {
         </div>
 
         {/* Right Images Section */}
-        <div className="grid grid-cols-3 gap-8 items-center justify-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-center justify-center">
           <Image
             src="/assets/productdesign/figma.svg"
             alt="Figma"

@@ -43,7 +43,7 @@ const Testimonial = () => {
       style={{ background: theme.colors.background.gradient3 }}
     >
       <div
-        className={`flex flex-col xl:flex-row ${theme.spacing.container} justify-center mb-40 mt-60 gap-12 lg:gap-0`}
+        className={`flex flex-col xl:flex-row ${theme.spacing.container} justify-center mb-10 lg:mb-40 mt-10 lg:mt-40 gap-12 lg:gap-0`}
       >
         {/* Left Section */}
         <div className="w-full lg:w-1/2 text-center lg:text-left">

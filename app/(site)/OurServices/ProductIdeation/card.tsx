@@ -29,47 +29,56 @@ const IdeationCard = () => {
         2xl:grid-cols-5        /* ✅ 2xl: 5 cards */
       `}
     >
-      {cards.map((card, index) => (
-        <div
-          key={index}
-          className="text-white rounded-2xl p-6 flex flex-col justify-between"
-          style={{
-            width: index === 1 ? "100%" : "232.42px",
-            minHeight: "509px",
-            backgroundColor: "#1D1D1D",
-            whiteSpace: "normal",
-          }}
-        >
-          {/* Top-left Image */}
-          <div>
-            <Image
-              src={card.TopLeft}
-              alt={card.Title || card.BottomLeft || "card-image"}
-              width={71.08}
-              height={71.08}
-              className="object-contain mb-6"
-            />
-          </div>
+    {cards.map((card, index) => (
+  <div
+    key={index}
+    className={`text-white rounded-2xl p-6 flex flex-col justify-between ml-5 mr-5
+      bg-[#1D1D1D]
+       sm:w-[80%]
+      ${index !== 1 ? "lg:w-[232.42px]" : "lg:w-full"}
+    `}
+    style={{
+      minHeight: "509px",
+      whiteSpace: "normal",
+    }}
+  >
+    {/* Top-left Image */}
+    <div>
+      <Image
+        src={card.TopLeft}
+        alt={card.Title || card.BottomLeft || "card-image"}
+        width={71.08}
+        height={71.08}
+        className="object-contain mb-6"
+      />
+    </div>
 
-          {/* Content Area */}
-          {index === 1 ? (
-            <div className="flex-1 mt-[30px] text-left">
-              <h3 className={`${theme.typography.paragraph.p1} ${theme.colors.brand.accent} leading-[30.4px] font-semibold`}>
-                {card.Title}
-              </h3>
-              <p className={`${theme.typography.paragraph.p1} ${theme.colors.brand.accent} mt-10 leading-[30px] font-normal`}>
-                {card.Content}
-              </p>
-            </div>
-          ) : (
-            <div>
-              <p className={`${theme.typography.paragraph.p1} ${theme.colors.brand.accent} leading-[33px] font-semibold mt-auto`}>
-                {card.BottomLeft}
-              </p>
-            </div>
-          )}
-        </div>
-      ))}
+    {/* Content Area */}
+    {index === 1 ? (
+      <div className="flex-1 mt-[30px] text-left">
+        <h3
+          className={`${theme.typography.paragraph.p1} ${theme.colors.brand.accent} leading-[30.4px] font-semibold`}
+        >
+          {card.Title}
+        </h3>
+        <p
+          className={`${theme.typography.paragraph.p1} ${theme.colors.brand.accent} mt-10 leading-[30px] font-normal`}
+        >
+          {card.Content}
+        </p>
+      </div>
+    ) : (
+      <div>
+        <p
+          className={`${theme.typography.paragraph.p1} ${theme.colors.brand.accent} leading-[33px] font-semibold mt-auto`}
+        >
+          {card.BottomLeft}
+        </p>
+      </div>
+    )}
+  </div>
+))}
+
     </div>
   );
 };

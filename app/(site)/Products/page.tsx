@@ -1,7 +1,8 @@
 import React from "react";
 import Mockdata from "./Mockdata";
 import Navbar from "@components/common/Navbar";
-import Background from "@components/sections/Background/Background";
+
+import Hero from "@components/sections/Hero";
 
 export default function OurServicesPage() {
   return (
@@ -13,8 +14,13 @@ export default function OurServicesPage() {
         <div className=" mx-auto text-center">
           
           {/* cards from mockdata */}
-          <Mockdata />
-          <Background/>
+           <div className="relative z-10">
+  <Mockdata />
+</div>
+
+<div className="relative z-0  -mt-100">
+  <Hero />
+</div>
         </div>
       </section>
     </>

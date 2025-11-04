@@ -182,7 +182,7 @@ const Footer = () => {
       <div className="max-w-[1300px] mx-auto flex justify-end pt-30 px-4">
         <Link href="/contact" passHref>
           <div
-            className={`flex items-center w-[421px] h-[80px] rounded-full px-5 gap-4 cursor-pointer`}
+            className={`flex items-center lg:w-[421px] h-[80px] rounded-full px-5 gap-4 cursor-pointer`}
             style={{ background: theme.colors.background.dark }}
           >
             <span
@@ -191,7 +191,7 @@ const Footer = () => {
               Contact Us
             </span>
             <p
-              className={`${theme.colors.text.inverse} text-[18px] leading-[23px] font-normal`}
+              className={`${theme.colors.text.inverse} text-[15px] lg:text-[18px] leading-[23px] font-normal`}
             >
               SHARE YOUR PRODUCT IDEA WITH US
             </p>

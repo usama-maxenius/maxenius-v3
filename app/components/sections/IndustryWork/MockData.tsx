@@ -98,7 +98,7 @@ const cards = [
 const MockData = () => {
   return (
     <div
-      className={`grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-6 ${theme.spacing.container}`}
+      className={`grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-6 ${theme.spacing.container} ml-3 mr-3`}
     >
       {cards.map((card, index) => (
         <Card

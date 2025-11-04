@@ -40,18 +40,21 @@ import AnotherPage from "./newSlider"
 const Portfolio = () => {
   return (
     <section
-      className={`w-full items-center overflow-hidden bg-cover bg-center bg-no-repeat ${theme.spacing.section}`}
-      style={{ backgroundImage:"url('/assets/portfolio/portfolio.svg')" }}
+      className={`w-full items-center overflow-hidden  py-10`}
+      // style={{ backgroundImage:"url('/assets/portfolio/portfolio.svg')" }}
+      style={{
+        background: theme.colors.background.gradient2
+      }}
     >
       {/* Header */}
-      <div className={`mt-20  text-center px-6 ${theme.spacing.scontainer} `}>
+      <div className={`mt-20 text-start  lg:text-center px-6 ${theme.spacing.scontainer} `}>
         <p
           className={`${theme.typography.paragraph.p2} ${theme.colors.brand.primary} leading-[100%] font-bold`}
         >
           PORTFOLIO
         </p>
         <h3
-          className={`${theme.typography.heading.h3} ${theme.colors.brand.accent} mt-4 mb-12 leading-[60px]`}
+          className={`${theme.typography.heading.h4} lg:${theme.typography.heading.h3} ${theme.colors.brand.accent} mt-4 mb-12 leading-[60px]`}
         >
           Explore some of the transformative journeys of Maxenius global clients
         </h3>
