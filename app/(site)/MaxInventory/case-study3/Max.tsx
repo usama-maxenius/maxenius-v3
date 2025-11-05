@@ -1,19 +1,35 @@
+
+import Breadcrumbs from '@components/common/BreadCrumb.tsx/BreadCrumb'
 import { theme } from '@config/theme'
 import Image from 'next/image'
-import React from 'react'
+
+
 
 
 
 
 
 const Max = () => {
+   const items=[
+    { label: "HOME", href: "/" },
+    { label: "CASE", href: "/docs" },
+    { label: "REFINE PHARMA", href: "/docs/components", active: true },
+  ]
+
+
   return (
     <section className={`${theme.colors.background.gradient3} relative`}
     style={{
         background:
         theme.colors.background.gradient3
     }}>
+      
+
+     
         <div className={`${theme.spacing.container} mx-auto text-center lg:pb-170 ${theme.spacing.section}`}>
+         <div className={`${theme.spacing.container} pt-4`}>
+        <Breadcrumbs items={items}/>
+       </div>
             <h1 className={`${theme.colors.brand.accent} font-semibold ${theme.typography.heading.h2} lg:${theme.typography.heading.h0} pt-[55px] leading-[70px] lg:leading-[94px]`}>MAX Inventory</h1>
             <p className={`${theme.typography.paragraph.p3} ${theme.colors.brand.accent} font-medium leading-[30px] mx-auto pt-[35px] lg:w-[51%] `}>Lorem ipsum dolor sit amet consectetur. Orci amet sit habitasse gravida. Tincidunt semper gravida dui nunc. Quam et orci elit tincidunt. </p>
             <div className={`flex flex-wrap justify-center gap-3 pt-10 mx-auto`}>

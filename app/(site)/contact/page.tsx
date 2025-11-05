@@ -2,7 +2,16 @@ import { theme } from '@config/theme'
 import Image from 'next/image'
 import React from 'react'
 
+import Breadcrumbs from '@components/common/BreadCrumb.tsx/BreadCrumb'
+
 const Page = () => {
+
+    const items=[
+    { label: "HOME", href: "/" },
+    
+    { label: "CONTACT US", href: "/docs/components", active: true },
+  ]
+
   return (
     <section
       className={`py-30`}
@@ -11,6 +20,9 @@ const Page = () => {
       }}
     >
       {/* ✅ Added flex-wrap + gap-10 for responsive wrapping */}
+      <div className={`${theme.spacing.container} pt-4`}>
+        <Breadcrumbs items={items}/>
+      </div>
       <div
         className={`flex flex-col 2xl:flex-row  justify-center gap-10 mt-20 mb-50 ${theme.spacing.container} mt-[10%]`}
       >

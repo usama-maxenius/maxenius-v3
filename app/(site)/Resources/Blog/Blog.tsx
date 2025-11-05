@@ -1,10 +1,29 @@
 import { Search } from "lucide-react";
 import { theme } from '@config/theme'
 import React from 'react'
+import Breadcrumbs from "@components/common/BreadCrumb.tsx/BreadCrumb";
+import { BreadcrumbItem } from "@/components/ui/breadcrumb";
+
+
+
+
+
 
 const Blog = () => {
+   const items=[
+    { label: "HOME", href: "/" },
+    { label: "CASE", href: "/docs" },
+    { label: "REFINE PHARMA", href: "/docs/components", active: true },
+  ]
+
   return (
+ 
+
    <section className={`${theme.spacing.section} bg-black`}>
+    <div className={`${theme.spacing.container} pt-4`}>
+    <Breadcrumbs items={items}/>
+
+    </div>
     <div className= {`${theme.spacing.container} mx-auto flex flex-col items-center justify-center gap-6 mt-10`}>
     <h1 className={`${theme.typography.heading.h3} lg:${theme.typography.heading.h0} ${theme.colors.brand.accent} font-semibold leading-[70px] lg:leading-[100px] mb-5`}>NEWS & BLOG</h1>
     <p className={`${theme.colors.brand.accent} ${theme.typography.paragraph.p2} leading-[35px] font-normal text-start lg:text-center lg:w-[52%] mb-10`}>Lorem ipsum dolor sit amet consectetur. Vel elementum egestas eu faucibus. Nibh fringilla sociis.Lorem ipsum dolor sit amet consectetur.  </p>
@@ -34,6 +53,7 @@ const Blog = () => {
     </div>
 
    </section>
+
   )
 }
 

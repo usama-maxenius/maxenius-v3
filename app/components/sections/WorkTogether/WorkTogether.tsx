@@ -60,17 +60,17 @@ const WorkTogether = () => {
         {/* Left Content */}
        <div className="w-full lg:w-[70%] text-center lg:text-left">
   <h1
-    className={`${theme.typography.heading.h2} md:${theme.typography.heading.h0} lg:${theme.typography.heading.h1} ${theme.colors.text.inverse} leading-[1.1] lg:w-[800px]`}
+    className={`${theme.typography.heading.h2} md:${theme.typography.heading.h0} lg:${theme.typography.heading.h1} ${theme.colors.text.inverse} leading-[130px] font-bold  lg:w-[800px]`}
   >
     HAVE
   </h1>
   <h1
-    className={`${theme.typography.heading.h2} md:${theme.typography.heading.h0} lg:${theme.typography.heading.h1} ${theme.colors.text.inverse} leading-[1.1] lg:w-[800px]`}
+    className={`${theme.typography.heading.h2} md:${theme.typography.heading.h0} lg:${theme.typography.heading.h1} ${theme.colors.text.inverse} leading-[130px] font-bold lg:w-[800px]`}
   >
     A PROJECT?
   </h1>
   <h1
-    className={`${theme.typography.heading.h2} md:${theme.typography.heading.h0} lg:${theme.typography.heading.h1} ${theme.colors.text.inverse} leading-[1.1] lg:w-[800px]`}
+    className={`${theme.typography.heading.h2} md:${theme.typography.heading.h0} lg:${theme.typography.heading.h1} ${theme.colors.text.inverse} leading-[130px] font-bold lg:w-[800px]`}
   >
     CONTACT US
   </h1>

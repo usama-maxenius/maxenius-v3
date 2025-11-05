@@ -3,13 +3,25 @@ import Image from "next/image";
 import { theme } from '@config/theme';
 import Services from './Services/Services';
 
+import Breadcrumbs from '@components/common/BreadCrumb.tsx/BreadCrumb';
+
+
 
 const ProductDesign = () => {
+    const items=[
+    { label: "HOME", href: "/" },
+    { label: "SERVICES", href: "/docs" },
+    { label: "PRODUCT DESIGN", href: "/docs/components", active: true },
+  ]
+
   return (
-    <section className={`w-full items-center overflow-hidden bg-cover bg-no-repeat bg-center py-5`}
+    <section className={`w-full items-center overflow-hidden bg-cover bg-no-repeat bg-center py-35`}
     style={{backgroundImage:"url('/assets/productdesign/designback.svg')"}}>
-      
-      <div className={`text-center px-5 ${theme.spacing.container}`}>
+     
+      <div className={`text-center px-5 ${theme.spacing.container} `}>
+        <div className=''>
+        <Breadcrumbs items={items}/>
+        </div>
         <h1 className={`${theme.typography.heading.h3} lg:text-[96px] ${theme.colors.brand.accent} mx-auto mt-40 text-start lg:w-[70%] font-semibold leading-[80px] lg:leading-[114px]`}>We Offer Product Design and Solution Services</h1>
         <div className='flex flex-col lg:flex-row lg:items-center lg:justify-center mx-auto mt-10 w-full'>
           <div className={`lg:w-[40%]`}>

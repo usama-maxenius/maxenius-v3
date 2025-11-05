@@ -7,6 +7,7 @@ import Footer from '@components/common/Footer';
 import ScrollToTop from '@components/common/ScrollToTop/ScrollToTop';
 
 
+
 // Configure Poppins font
 const poppins = Poppins({
   subsets: ['latin'],
@@ -27,6 +28,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={poppins.className}>
         <Navbar />
+      
         <main>{children}</main>
         <Footer/>
         <ScrollToTop />

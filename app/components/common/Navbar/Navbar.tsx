@@ -92,7 +92,7 @@ const Navbar = ({ textColor = 'white' }: NavbarProps) => {
 
   return (
     <nav
-      className={`absolute top-0 left-0 w-full z-30 border-b ${theme.colors.border.base} bg-transparent py-4 px-6`}
+      className={`absolute top-0 left-0 w-full z-30 border-b ${theme.colors.border.base} bg-transparent py-6 px-6`}
     >
       <div className={`${theme.spacing.container} flex items-center justify-between`}>
         {/* Logo */}

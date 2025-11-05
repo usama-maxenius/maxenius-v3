@@ -3,9 +3,18 @@ import Image from "next/image";
 import React from 'react'
 import IdeationCard from './card';
 
+import Breadcrumbs from '@components/common/BreadCrumb.tsx/BreadCrumb';
+
 const ProductIdeation = () => {
+
+     const items=[
+    { label: "HOME", href: "/" },
+    { label: "SERVICES", href: "/docs" },
+    { label: "PRODUCT DEVELOPMENT", href: "/docs/components", active: true },
+  ]
+
   return (
-     <section className={`w-full items-center overflow-hidden  `}
+     <section className={`w-full items-center overflow-hidden py-35 `}
      style={{
       background: theme.colors.background.gradient3
      }}
@@ -21,7 +30,9 @@ const ProductIdeation = () => {
           //    paddingBottom: '300px' // ✅ keeps spacing at bottom consistent
           //  }}
          >
-
+            <div className={`${theme.spacing.container}`}>
+              <Breadcrumbs items={items}/>
+            </div>
             <div className={`text-center  ${theme.spacing.container}`}>
                     <h1 className={`text-[55px] md:${theme.typography.heading.h0} ${theme.colors.brand.accent} mx-auto text-center  mt-40 lg:mt-60 lg:text-start  lg:w-[60%] font-semibold leading-[80px] lg:leading-[114px]`}>Transform Your Ideas into Digital Reality</h1>
                     <div className='flex items-center justify-center mx-auto mt-10 w-full'>
