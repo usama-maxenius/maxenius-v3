@@ -112,7 +112,7 @@ import ChooseCard from "./ChooseCard"
 const ChooseUs = () => {
   return (
    <section
-  className={`relative w-full min-h-screen  py-5`}
+  className={`relative w-full min-h-screen  pt-7 pb-20`}
   // style={{ backgroundImage: "url('/assets/chooseus/choose.svg')" }}
   style={{
     background: theme.colors.background.gradient2

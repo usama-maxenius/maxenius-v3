@@ -43,7 +43,7 @@ const Portfolio = () => {
     //   style={{ backgroundImage:"url('/assets/portfolio/portfolio.svg')" }}
     // >
        <section
-      className={`relative w-full items-center     mb-12 py-10`}
+      className={`relative w-full items-center     mb-12  py-20`}
       style={{
         background: theme.colors.background.gradient3
       }}

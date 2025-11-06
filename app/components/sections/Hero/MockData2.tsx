@@ -31,7 +31,7 @@ const MockData2 = () => {
                </div>
    
                {/* Logos */}
-               <div className="flex flex-wrap justify-between items-center flex-1 gap-8">
+               <div className="flex flex-wrap justify-evenly items-center flex-1 gap-8">
                  {logos.map((logo, index) => (
                    <div
                      key={index}
