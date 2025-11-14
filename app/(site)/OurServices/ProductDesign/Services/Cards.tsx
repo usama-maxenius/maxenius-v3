@@ -23,7 +23,7 @@ const ProcessCards = () => {
         {cards.map((card, index) => (
           <Card
             key={card.number}
-            className="flex flex-col lg:flex-row justify-center items-center border-b border-gray-800 pb-20 !gap-0 lg:gap-40 !border-t-0 !border-l-0 !border-r-0 !bg-transparent w-[90%]"
+            className="flex flex-col lg:flex-row justify-center items-center border-b border-gray-800 pb-20 gap-40 !border-t-0 !border-l-0 !border-r-0 !bg-transparent w-[90%]"
           >
             {/* Left Side: Number + Title */}
             <div className="relative flex items-center justify-center w-full sm:w-auto sm:justify-center">

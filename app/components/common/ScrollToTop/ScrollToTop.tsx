@@ -71,7 +71,7 @@ const ScrollToTop = () => {
       {isVisible && (
         <button
           onClick={scrollToTop}
-          className={`fixed bottom-6 right-6 ${theme.components.button.thirdly}  p-4 transition-all hover:opacity-90`}
+          className={`fixed bottom-6 right-6 ${theme.components.button.thirdly}  p-4 transition-all hover:opacity-90 cursor-pointer`}
         >
           <ArrowUp className="w-[17px] h-[17px]" />
         </button>

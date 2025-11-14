@@ -34,7 +34,7 @@ const Mockdata = () => {
           background: theme.colors.background.light
         }}>
       <div
-        className={`grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 ${theme.spacing.container}`}
+        className={`grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 ${theme.spacing.container} lg:pt-[12px]`}
       >
         {cards.map((card, index) => (
           <Link
