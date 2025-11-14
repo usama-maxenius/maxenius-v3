@@ -27,7 +27,7 @@ const Mockdata = () => {
     style={{
           background: theme.colors.background.light
         }}>  
-      <div className={`grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2  ${theme.spacing.container} lg:pt-[12px] `}  >
+      <div className={`grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2  ${theme.spacing.container} pt-[12px] `}  >
         {cards.map((card, index) => (
           <Card
             key={index}
